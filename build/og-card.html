@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--
+  Source for assets/og-image.png (1200x630 social card).
+  Regenerate with:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
+      --window-size=1200,630 --default-background-color=00000000 \
+      --screenshot="assets/og-image.png" "build/og-card.html"
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px}
+  body{
+    font-family:'Inter',sans-serif;
+    background:
+      radial-gradient(1200px 520px at 88% -8%, rgba(58,99,175,.10), transparent 60%),
+      radial-gradient(900px 520px at 108% 120%, rgba(42,162,123,.10), transparent 55%),
+      #FAFAF8;
+    color:#16161A;
+    padding:74px 80px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;overflow:hidden;
+  }
+  .accentbar{position:absolute;top:0;left:0;right:0;height:8px;
+    background:linear-gradient(90deg,#3A63AF,#2AA27B,#7F00FD,#002FE6,#FFCF3E)}
+  .top{display:flex;align-items:center;gap:20px}
+  .mark{width:64px;height:64px}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:19px;letter-spacing:.16em;
+    text-transform:uppercase;color:#8E8E96}
+  .mid h1{font-family:'Archivo',sans-serif;font-weight:700;font-size:104px;
+    letter-spacing:-.03em;line-height:.98}
+  .mid p{font-size:26px;color:#5B5B63;margin-top:22px;max-width:30ch;line-height:1.4}
+  .strip{display:flex;gap:30px;align-items:flex-end}
+  .brand{display:flex;flex-direction:column;gap:11px}
+  .dot{width:44px;height:44px;border-radius:13px;position:relative;overflow:hidden;
+    box-shadow:0 1px 3px rgba(0,0,0,.10)}
+  .dot::before,.dot::after{content:"";position:absolute;inset:0}
+  .dot::after{clip-path:polygon(100% 0,100% 100%,0 100%)}
+  .brand .nm{font-family:'JetBrains Mono',monospace;font-size:14.5px;
+    letter-spacing:.03em;color:#5B5B63}
+</style>
+</head>
+<body>
+  <div class="accentbar"></div>
+  <div class="top">
+    <svg class="mark" viewBox="-2.4 -3 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M29.4013 16.5927C30.6013 15.3892 30.5951 13.5839 29.4013 12.3743C25.8201 8.76376 22.2326 5.16551 18.6451 1.55499C18.3388 1.24183 18.0263 0.934814 17.6951 0.609375C16.8638 1.82516 16.2263 3.0778 15.9513 4.49008C15.6951 5.82253 15.9326 7.0199 16.9076 8.02078C18.0388 9.1813 19.1763 10.3295 20.3138 11.4839C21.2826 12.4664 22.2513 13.455 23.2513 14.4743L27.4013 18.5515L29.4013 16.5866V16.5927Z" fill="url(#p0)"/>
+      <path d="M27.1365 10.5257L23.249 14.4924C23.1115 14.6336 22.999 14.7503 22.8865 14.8608C20.899 16.8871 18.9053 18.9073 16.9178 20.9336C16.1303 21.738 15.8053 22.7328 15.8928 23.8073C15.9928 25.0538 16.424 26.2266 17.0553 27.3196C17.249 27.6573 17.4615 27.995 17.6803 28.3573C17.8053 28.2407 17.899 28.1608 17.9803 28.081C21.7865 24.2556 25.599 20.4301 29.399 16.5985C30.599 15.395 30.5928 13.5898 29.399 12.3801C28.7115 11.6863 28.024 10.9985 27.3365 10.3047L27.1365 10.5196V10.5257Z" fill="#6098FF"/>
+      <path d="M0.9 12.4487C-0.3 13.6522 -0.3 15.4575 0.9 16.6671C4.48125 20.2777 8.0625 23.8821 11.65 27.4926C11.9563 27.8057 12.2688 28.1128 12.6 28.4382C13.4313 27.2224 14.0688 25.9698 14.3438 24.5575C14.6063 23.225 14.3625 22.0277 13.3938 21.0268C12.2625 19.8663 11.125 18.718 9.99375 17.5636C9.025 16.5812 8.0625 15.5926 7.05625 14.5733L2.9125 10.4961L0.9125 12.461L0.9 12.4487Z" fill="url(#p1)"/>
+      <path d="M3.15625 18.5152L7.04375 14.5485C7.18125 14.4073 7.29375 14.2906 7.40625 14.1801C9.4 12.1538 11.3875 10.1336 13.3813 8.10728C14.1688 7.30289 14.4938 6.30816 14.4063 5.23359C14.3063 3.9871 13.875 2.8143 13.2438 1.72131C13.05 1.38359 12.8375 1.04587 12.625 0.683594C12.5 0.80026 12.4063 0.880085 12.325 0.95991C8.51875 4.79149 4.70625 8.61079 0.9 12.4362C-0.3 13.6397 -0.3 15.445 0.9 16.6546C1.5875 17.3485 2.26875 18.0362 2.95625 18.7301L3.15625 18.5152Z" fill="#6098FF"/>
+      <defs>
+        <linearGradient id="p0" x1="30.9638" y1="11.048" x2="15.2871" y2="8.23284" gradientUnits="userSpaceOnUse">
+          <stop offset="0.25" stop-color="#6098FF"/><stop offset="0.63" stop-color="#15294C"/><stop offset="0.958333" stop-color="#15294C"/>
+        </linearGradient>
+        <linearGradient id="p1" x1="-0.665252" y1="17.9996" x2="15.0094" y2="20.8259" gradientUnits="userSpaceOnUse">
+          <stop offset="0.15625" stop-color="#6098FF"/><stop offset="0.6299" stop-color="#162E52"/><stop offset="0.63" stop-color="#15294C"/><stop offset="0.880208" stop-color="#12294C"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="kicker">Tiugo Technologies</span>
+  </div>
+
+  <div class="mid">
+    <h1>Brand Browser</h1>
+    <p>Logos, colors &amp; type for the Tiugo family of brands.</p>
+  </div>
+
+  <div class="strip">
+    <div class="brand"><span class="dot" style="--c1:#3A63AF;--c2:#2AA27B"></span><span class="nm">Tiugo</span></div>
+    <div class="brand"><span class="dot" style="--c1:#7F00FD;--c2:#B0EB1D"></span><span class="nm">CKEditor</span></div>
+    <div class="brand"><span class="dot" style="--c1:#002FE6;--c2:#00BC84"></span><span class="nm">Tiny</span></div>
+    <div class="brand"><span class="dot" style="--c1:#0505E5;--c2:#FBE700"></span><span class="nm">ButterCMS</span></div>
+    <div class="brand"><span class="dot" style="--c1:#FFCF3E;--c2:#002FFF"></span><span class="nm">Uploadcare</span></div>
+  </div>
+  <style>.dot::before{background:var(--c1)}.dot::after{background:var(--c2)}</style>
+</body>
+</html>
