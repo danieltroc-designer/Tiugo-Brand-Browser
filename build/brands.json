@@ -3,158 +3,336 @@
   "id": "uploadcare",
   "name": "Uploadcare",
   "domain": "uploadcare.com",
-  "tagline": "File platform for modern apps",
-  "accent": "#FFCF3E",
-  "accent2": "#002FFF",
-  "dark": true,
-  "logos": [
-   {
-    "label": "Lockup · dark background",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 111 16\" fill=\"none\"><rect x=\"4.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><g transform=\"translate(22,0)\" color=\"#FFFFFF\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></g></svg>",
-    "bg": "dark",
-    "note": "Glyph #FFCF3E + white wordmark. The preferred first-contact treatment."
-   },
-   {
-    "label": "Lockup · light background",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 111 16\" fill=\"none\"><rect x=\"4.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><g transform=\"translate(22,0)\" color=\"#000000\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></g></svg>",
-    "bg": "light",
-    "note": "On light backgrounds the glyph shifts to #FFBD18 with a black wordmark."
-   },
-   {
-    "label": "Glyph — the donut waffle",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\"><rect x=\"20.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/></svg>",
-    "bg": "dark",
-    "note": "8×8 pixel grid, pixel-to-cell ratio 0.85 for general use. Can stand alone once context is set."
-   },
-   {
-    "label": "Wordmark",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 89 16\" class=\"Navbarstyles__LogoText-sc-1b19ce9-3 GPrfj\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></svg>",
-    "bg": "dark",
-    "note": "Never used alone — only in a lockup with the glyph. Uses currentColor.",
-    "fg": "#FFFFFF"
-   }
-  ],
-  "colorGroups": [
-   {
-    "group": "Brand",
-    "colors": [
+  "tagline": "File uploading, processing & delivery for web and mobile apps",
+  "accent": "#3771FF",
+  "accent2": "#FFC700",
+  "dark": false,
+  "versions": true,
+  "currentNotice": "Current Uploadcare branding — communicated until September 30, 2026.",
+  "variants": {
+   "current": {
+    "tagline": "File uploading, processing & delivery for web and mobile apps",
+    "accent": "#3771FF",
+    "accent2": "#FFC700",
+    "dark": false,
+    "logos": [
      {
-      "name": "Main brand",
-      "hex": "#FFCF3E"
+      "label": "Lockup · light background",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 113 18\"><circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"url(#ucLkL)\"></circle><g transform=\"translate(24,1)\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></g><defs><radialGradient id=\"ucLkL\" cx=\"0\" cy=\"0\" r=\"1\" gradientTransform=\"rotate(149.216 9.368 7.42)scale(17.5848 20.2492)\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"#FFC700\"></stop><stop offset=\"1\" stop-color=\"#FFEDAB\"></stop></radialGradient></defs></svg>",
+      "bg": "light",
+      "fg": "#181818",
+      "note": "Yellow-gradient symbol + wordmark in ink. The default first-contact treatment on light surfaces."
      },
      {
-      "name": "Light-bg brand",
-      "hex": "#FFBD18"
+      "label": "Lockup · dark background",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 113 18\"><circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"url(#ucLkD)\"></circle><g transform=\"translate(24,1)\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></g><defs><radialGradient id=\"ucLkD\" cx=\"0\" cy=\"0\" r=\"1\" gradientTransform=\"rotate(149.216 9.368 7.42)scale(17.5848 20.2492)\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"#FFC700\"></stop><stop offset=\"1\" stop-color=\"#FFEDAB\"></stop></radialGradient></defs></svg>",
+      "bg": "dark",
+      "fg": "#FFFFFF",
+      "note": "Same lockup with a white wordmark for dark surfaces."
+     },
+     {
+      "label": "Symbol — gradient circle",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 18 18\"><circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"url(#ucSym)\"></circle><defs><radialGradient id=\"ucSym\" cx=\"0\" cy=\"0\" r=\"1\" gradientTransform=\"rotate(149.216 9.368 7.42)scale(17.5848 20.2492)\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"#FFC700\"></stop><stop offset=\"1\" stop-color=\"#FFEDAB\"></stop></radialGradient></defs></svg>",
+      "bg": "light",
+      "note": "The soft yellow radial-gradient mark (#FFC700 → #FFEDAB). Stands alone once context is set."
+     },
+     {
+      "label": "Wordmark",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 89 16\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></svg>",
+      "bg": "light",
+      "fg": "#181818",
+      "note": "Uses currentColor — inherits ink on light, white on dark. Pair with the symbol."
      }
+    ],
+    "colorGroups": [
+     {
+      "group": "Brand",
+      "colors": [
+       {
+        "name": "Uploadcare Blue",
+        "hex": "#3771FF"
+       },
+       {
+        "name": "Deep Blue",
+        "hex": "#0E54FF"
+       },
+       {
+        "name": "Yellow",
+        "hex": "#FFC700"
+       },
+       {
+        "name": "Light Yellow",
+        "hex": "#FFEDAB"
+       }
+      ]
+     },
+     {
+      "group": "Tints",
+      "colors": [
+       {
+        "name": "Light Blue",
+        "hex": "#B7CCFF"
+       }
+      ]
+     },
+     {
+      "group": "Neutrals",
+      "colors": [
+       {
+        "name": "Ink",
+        "hex": "#181818"
+       },
+       {
+        "name": "Surface",
+        "hex": "#F3F4F6"
+       },
+       {
+        "name": "Hairline",
+        "hex": "#E4E4E8"
+       },
+       {
+        "name": "White",
+        "hex": "#FFFFFF"
+       }
+      ]
+     }
+    ],
+    "fonts": [
+     {
+      "family": "Inter",
+      "role": "Primary — UI, body and headings (InterDisplay for large headings)",
+      "source": "Google Fonts",
+      "css": "Inter, system-ui, sans-serif"
+     },
+     {
+      "family": "CommitMono",
+      "role": "Code and monospace labels",
+      "source": "commitmono.com (free, not on Google Fonts)",
+      "css": "'CommitMono', ui-monospace, SFMono-Regular, Menlo, monospace"
+     }
+    ],
+    "typeStyles": [
+     {
+      "name": "Display",
+      "family": "Inter",
+      "weight": "700 Bold",
+      "size": 48,
+      "lh": "1.1",
+      "ls": "-0.02em"
+     },
+     {
+      "name": "Heading",
+      "family": "Inter",
+      "weight": "600 SemiBold",
+      "size": 32,
+      "lh": "1.2",
+      "ls": "-0.01em"
+     },
+     {
+      "name": "Subheading",
+      "family": "Inter",
+      "weight": "600 SemiBold",
+      "size": 20,
+      "lh": "1.4",
+      "ls": "0"
+     },
+     {
+      "name": "Body",
+      "family": "Inter",
+      "weight": "400 Regular",
+      "size": 18,
+      "lh": "1.6",
+      "ls": "0"
+     },
+     {
+      "name": "Body Small",
+      "family": "Inter",
+      "weight": "400 Regular",
+      "size": 16,
+      "lh": "1.6",
+      "ls": "0"
+     },
+     {
+      "name": "UI Label",
+      "family": "Inter",
+      "weight": "500 Medium",
+      "size": 14,
+      "lh": "1.4",
+      "ls": "0"
+     },
+     {
+      "name": "Mono",
+      "family": "CommitMono",
+      "weight": "400 Regular",
+      "size": 14,
+      "lh": "1.5",
+      "ls": "0",
+      "mono": true
+     }
+    ],
+    "guidelines": [
+     "Sample design system extracted from uploadcare.com — the current branding communicated until September 30, 2026.",
+     "Uploadcare Blue #3771FF drives links, primary buttons and interactive states; Deep Blue #0E54FF is the hover/pressed shade.",
+     "The mark is a soft yellow radial gradient (#FFC700 → #FFEDAB); keep the gradient intact and pair it with the wordmark.",
+     "Inter carries UI and copy, with InterDisplay for large headings; CommitMono sets code and technical labels.",
+     "Lead with light, neutral surfaces (White, Surface #F3F4F6) so the blue and yellow accents stand out."
     ]
    },
-   {
-    "group": "Action",
-    "colors": [
+   "new": {
+    "tagline": "File platform for modern apps",
+    "accent": "#FFCF3E",
+    "accent2": "#002FFF",
+    "dark": true,
+    "logos": [
      {
-      "name": "Action",
-      "hex": "#002FFF"
+      "label": "Lockup · dark background",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 111 16\" fill=\"none\"><rect x=\"4.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"0.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"14.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"2.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"12.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"4.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"6.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"8.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><rect x=\"10.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFCF3E\"/><g transform=\"translate(22,0)\" color=\"#FFFFFF\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></g></svg>",
+      "bg": "dark",
+      "note": "Glyph #FFCF3E + white wordmark. The preferred first-contact treatment."
      },
      {
-      "name": "Action hover",
-      "hex": "#1E47FF"
+      "label": "Lockup · light background",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 111 16\" fill=\"none\"><rect x=\"4.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"0.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"2.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"4.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"6.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"8.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"0.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"14.150\" y=\"10.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"2.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"12.150\" y=\"12.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"4.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"6.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"8.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><rect x=\"10.150\" y=\"14.150\" width=\"1.700\" height=\"1.700\" fill=\"#FFBD18\"/><g transform=\"translate(22,0)\" color=\"#000000\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></g></svg>",
+      "bg": "light",
+      "note": "On light backgrounds the glyph shifts to #FFBD18 with a black wordmark."
+     },
+     {
+      "label": "Glyph — the donut waffle",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\"><rect x=\"20.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"0.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"10.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"20.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"30.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"40.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"0.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"70.750\" y=\"50.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"10.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"60.750\" y=\"60.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"20.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"30.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"40.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/><rect x=\"50.750\" y=\"70.750\" width=\"8.500\" height=\"8.500\" fill=\"#FFCF3E\"/></svg>",
+      "bg": "dark",
+      "note": "8×8 pixel grid, pixel-to-cell ratio 0.85 for general use. Can stand alone once context is set."
+     },
+     {
+      "label": "Wordmark",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 89 16\" class=\"Navbarstyles__LogoText-sc-1b19ce9-3 GPrfj\"><path fill=\"currentColor\" d=\"M1.483 8.177V.455H0v7.722c0 2.872 1.483 4.646 4.72 4.646 3.151 0 4.719-1.774 4.719-4.646V.455H7.955v7.722c0 2.365-1.095 3.328-3.236 3.328s-3.236-.963-3.236-3.328\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M13.366 5.355V4.172H12.05V16h1.35v-4.478h.17c.505.727 1.398 1.301 2.78 1.301 2.023 0 3.927-1.588 3.927-4.427s-1.904-4.427-3.927-4.427c-1.433 0-2.326.625-2.815 1.386h-.168zm5.528 3.041c0 2.028-1.13 3.21-2.78 3.21-1.653 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M23.563.455V12.62h-1.348V.455z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M33.828 8.396c0-2.619-1.635-4.427-4.164-4.427s-4.163 1.808-4.163 4.427c0 2.62 1.635 4.427 4.163 4.427s4.163-1.808 4.163-4.427zm-1.383 0c0 2.028-1.095 3.21-2.78 3.21-1.686 0-2.782-1.182-2.782-3.21s1.096-3.21 2.781-3.21 2.781 1.183 2.781 3.21m6.658-4.426c1.382 0 2.275.574 2.781 1.3h.169l.337-1.098h1.01v8.449h-1.315v-1.183h-.168c-.489.76-1.382 1.385-2.815 1.385-2.023 0-3.927-1.588-3.927-4.427s1.904-4.427 3.927-4.427zm.236 7.637c1.652 0 2.781-1.183 2.781-3.21s-1.13-3.211-2.781-3.211-2.781 1.183-2.781 3.21 1.13 3.21 2.781 3.21zM52.047 5.27c-.505-.726-1.398-1.3-2.78-1.3-2.023 0-3.928 1.588-3.928 4.426s1.905 4.427 3.928 4.427c1.432 0 2.325-.625 2.814-1.385h.169v1.183h1.314V.455h-1.348V5.27zm.236 3.126c0 2.028-1.129 3.21-2.78 3.21-1.652 0-2.782-1.182-2.782-3.21s1.13-3.21 2.781-3.21 2.781 1.183 2.781 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M59.767 3.97c2.393 0 3.438 1.368 3.725 2.737v.253H62.11c-.186-.879-.674-1.74-2.36-1.74-1.77 0-2.865 1.149-2.865 3.176s1.095 3.177 2.865 3.177c1.686 0 2.259-.879 2.46-1.825h1.383v.254c-.303 1.385-1.315 2.821-3.843 2.821-2.612 0-4.247-1.808-4.247-4.427s1.635-4.427 4.264-4.427z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M71.397 5.27c-.506-.726-1.4-1.3-2.781-1.3-2.023 0-3.927 1.588-3.927 4.426s1.904 4.427 3.927 4.427c1.432 0 2.326-.625 2.814-1.385h.169v1.183h1.315V4.17h-1.012l-.337 1.1zm.236 3.126c0 2.028-1.13 3.21-2.781 3.21s-2.781-1.182-2.781-3.21 1.129-3.21 2.78-3.21c1.652 0 2.782 1.183 2.782 3.21\" clip-rule=\"evenodd\"></path><path fill=\"currentColor\" d=\"M76.757 4.172v1.267h.168c.27-.76.927-1.3 2.225-1.3h.758v1.25h-.741c-2.023 0-2.377 1.165-2.377 2.686v4.546h-1.348V4.172z\"></path><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M88.757 8.058c0-2.28-1.348-4.089-3.96-4.089-2.563 0-4.13 1.808-4.13 4.427 0 2.602 1.567 4.427 4.197 4.427 2.174 0 3.455-1.25 3.809-2.737v-.253h-1.349c-.236.963-.977 1.774-2.494 1.774-1.686 0-2.68-1.2-2.714-2.839h6.641zm-3.96-2.906c1.651 0 2.51 1.098 2.544 2.467h-5.225c.068-1.42.995-2.467 2.68-2.467z\" clip-rule=\"evenodd\"></path></svg>",
+      "bg": "dark",
+      "note": "Never used alone — only in a lockup with the glyph. Uses currentColor.",
+      "fg": "#FFFFFF"
      }
-    ]
-   },
-   {
-    "group": "Grayscale base",
-    "colors": [
+    ],
+    "colorGroups": [
      {
-      "name": "BG Contrast",
-      "hex": "#000000"
+      "group": "Brand",
+      "colors": [
+       {
+        "name": "Main brand",
+        "hex": "#FFCF3E"
+       },
+       {
+        "name": "Light-bg brand",
+        "hex": "#FFBD18"
+       }
+      ]
      },
      {
-      "name": "BG Main",
-      "hex": "#090909"
+      "group": "Action",
+      "colors": [
+       {
+        "name": "Action",
+        "hex": "#002FFF"
+       },
+       {
+        "name": "Action hover",
+        "hex": "#1E47FF"
+       }
+      ]
      },
      {
-      "name": "Gray 0C",
-      "hex": "#0C0C0C"
-     },
-     {
-      "name": "Gray 18",
-      "hex": "#181818"
-     },
-     {
-      "name": "Gray 23",
-      "hex": "#232323"
-     },
-     {
-      "name": "Gray 2C",
-      "hex": "#2C2C2C"
-     },
-     {
-      "name": "Gray 47",
-      "hex": "#474747"
-     },
-     {
-      "name": "FG Muted",
-      "hex": "#A7A7A7"
-     },
-     {
-      "name": "FG Main",
-      "hex": "#FFFFFF"
+      "group": "Grayscale base",
+      "colors": [
+       {
+        "name": "BG Contrast",
+        "hex": "#000000"
+       },
+       {
+        "name": "BG Main",
+        "hex": "#090909"
+       },
+       {
+        "name": "Gray 0C",
+        "hex": "#0C0C0C"
+       },
+       {
+        "name": "Gray 18",
+        "hex": "#181818"
+       },
+       {
+        "name": "Gray 23",
+        "hex": "#232323"
+       },
+       {
+        "name": "Gray 2C",
+        "hex": "#2C2C2C"
+       },
+       {
+        "name": "Gray 47",
+        "hex": "#474747"
+       },
+       {
+        "name": "FG Muted",
+        "hex": "#A7A7A7"
+       },
+       {
+        "name": "FG Main",
+        "hex": "#FFFFFF"
+       }
+      ]
      }
+    ],
+    "fonts": [
+     {
+      "family": "Inter",
+      "role": "Primary — body text and headings (Inter Variable)",
+      "source": "Google Fonts",
+      "css": "Inter, sans-serif"
+     },
+     {
+      "family": "Commit Mono",
+      "role": "Code, actions, illustrations",
+      "source": "commitmono.com (free, not on Google Fonts)",
+      "css": "'Commit Mono','Fira Code',monospace"
+     }
+    ],
+    "typeStyles": [
+     {
+      "name": "Section title",
+      "family": "Inter",
+      "weight": "600 SemiBold",
+      "size": 20,
+      "lh": "1.5",
+      "ls": "0"
+     },
+     {
+      "name": "Body",
+      "family": "Inter",
+      "weight": "400 Regular",
+      "size": 18,
+      "lh": "1.5",
+      "ls": "0"
+     },
+     {
+      "name": "Mono label",
+      "family": "Commit Mono",
+      "weight": "500 Regular",
+      "size": 12,
+      "lh": "18px",
+      "ls": "0.1em",
+      "upper": true,
+      "mono": true
+     }
+    ],
+    "guidelines": [
+     "The \"donut waffle\" glyph is an 8×8 pixel grid. Pixel-to-cell ratio varies by use case — 0.85 for general purposes, up to 1.0 for favicons, lower for illustration.",
+     "The wordmark is never used alone; only in a lockup with the glyph. Prefer dark backgrounds when possible.",
+     "Prefer the full lockup with the yellow glyph on first contact. Once context is set, switch to subtler variants: glyph only, dim gray when appropriate.",
+     "The monochrome lockup is for mediums that don't allow color.",
+     "Minimal safe space around the lockup: 3 pixel cells on each side.",
+     "Color rule is restraint — the base is a digitally neutral grayscale; bright colors are singular accents, like glowing indicators on a dashboard.",
+     "The brand color is yellow; avoid its shades except the light-background variant. The action color is blue; avoid shades except UI states.",
+     "Don't rearrange the elements of a lockup. Don't place the logo on complex backgrounds. Don't use non-brand colors."
     ]
    }
-  ],
-  "fonts": [
-   {
-    "family": "Inter",
-    "role": "Primary — body text and headings (Inter Variable)",
-    "source": "Google Fonts",
-    "css": "Inter, sans-serif"
-   },
-   {
-    "family": "Commit Mono",
-    "role": "Code, actions, illustrations",
-    "source": "commitmono.com (free, not on Google Fonts)",
-    "css": "'Commit Mono','Fira Code',monospace"
-   }
-  ],
-  "typeStyles": [
-   {
-    "name": "Section title",
-    "family": "Inter",
-    "weight": "600 SemiBold",
-    "size": 20,
-    "lh": "1.5",
-    "ls": "0"
-   },
-   {
-    "name": "Body",
-    "family": "Inter",
-    "weight": "400 Regular",
-    "size": 18,
-    "lh": "1.5",
-    "ls": "0"
-   },
-   {
-    "name": "Mono label",
-    "family": "Commit Mono",
-    "weight": "500 Regular",
-    "size": 12,
-    "lh": "18px",
-    "ls": "0.1em",
-    "upper": true,
-    "mono": true
-   }
-  ],
-  "guidelines": [
-   "The \"donut waffle\" glyph is an 8×8 pixel grid. Pixel-to-cell ratio varies by use case — 0.85 for general purposes, up to 1.0 for favicons, lower for illustration.",
-   "The wordmark is never used alone; only in a lockup with the glyph. Prefer dark backgrounds when possible.",
-   "Prefer the full lockup with the yellow glyph on first contact. Once context is set, switch to subtler variants: glyph only, dim gray when appropriate.",
-   "The monochrome lockup is for mediums that don't allow color.",
-   "Minimal safe space around the lockup: 3 pixel cells on each side.",
-   "Color rule is restraint — the base is a digitally neutral grayscale; bright colors are singular accents, like glowing indicators on a dashboard.",
-   "The brand color is yellow; avoid its shades except the light-background variant. The action color is blue; avoid shades except UI states.",
-   "Don't rearrange the elements of a lockup. Don't place the logo on complex backgrounds. Don't use non-brand colors."
-  ]
+  }
  },
  {
   "id": "tiugo",
@@ -164,6 +342,7 @@
   "accent": "#3A63AF",
   "accent2": "#2AA27B",
   "dark": false,
+  "comingSoon": true,
   "logos": [
    {
     "label": "Primary lockup",
@@ -338,6 +517,7 @@
   "accent": "#7F00FD",
   "accent2": "#B0EB1D",
   "dark": false,
+  "comingSoon": true,
   "logos": [
    {
     "label": "Primary lockup",
@@ -509,6 +689,7 @@
   "accent": "#002FE6",
   "accent2": "#00BC84",
   "dark": false,
+  "comingSoon": true,
   "logos": [
    {
     "label": "Primary lockup",
@@ -772,6 +953,7 @@
   "accent": "#0505E5",
   "accent2": "#FBE700",
   "dark": false,
+  "comingSoon": true,
   "logos": [
    {
     "label": "Primary lockup",

@@ -61,6 +61,9 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .brand-btn .dot::after{background:var(--c2);clip-path:polygon(100% 0,100% 100%,0 100%)}
 .brand-btn .nm{font-weight:600;font-size:13.5px;line-height:1.2}
 .brand-btn .dm{font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
+.brand-btn.soon{opacity:.5;cursor:not-allowed}
+.brand-btn.soon:hover{background:transparent;border-color:transparent;box-shadow:none}
+.brand-btn .soon-badge{margin-left:auto;flex:none;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:2px 7px}
 .side-foot{margin-top:auto;font-size:11.5px;color:var(--ink-3);line-height:1.6}
 .side-foot a{color:var(--ink-2)}
 
@@ -76,6 +79,17 @@ main{padding:0 clamp(24px,5vw,72px) 96px;max-width:1180px}
 .chip .sw{width:9px;height:9px;border-radius:3px;background:var(--accent)}
 a.chip{text-decoration:none}
 a.chip:hover{border-color:var(--accent)}
+
+/* brand versions (Current / New) */
+.notice{display:flex;align-items:center;gap:10px;padding:10px 14px;margin-bottom:22px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));background:color-mix(in srgb,var(--accent) 13%,transparent);border-radius:10px;font-size:12.5px;line-height:1.45;color:var(--ink)}
+.notice .ni{flex:none;width:16px;height:16px;color:var(--accent)}
+.verbar{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin-top:22px;background:var(--card)}
+.verbar button{padding:8px 20px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-2);transition:background .15s,color .15s}
+.verbar button.on{background:var(--accent);color:var(--on-accent)}
+.soon-panel{border:1px dashed var(--line);border-radius:var(--r);background:var(--card);padding:64px 30px;text-align:center}
+.soon-panel .tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:5px 13px;margin-bottom:18px}
+.soon-panel h3{font-family:var(--disp);font-weight:700;font-size:27px;letter-spacing:-.01em;margin-bottom:10px}
+.soon-panel p{color:var(--ink-2);font-size:14px;max-width:46ch;margin:0 auto;line-height:1.6}
 
 section{margin-bottom:56px}
 .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
@@ -98,7 +112,7 @@ section{margin-bottom:56px}
 .logo-meta{padding:14px 16px 16px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:10px;flex:1}
 .logo-meta .lbl{font-weight:600;font-size:13.5px}
 .logo-meta .nt{font-size:12px;color:var(--ink-2);line-height:1.5;flex:1}
-.logo-meta .row{display:flex;gap:8px}
+.logo-meta .row{display:flex;gap:8px;flex-wrap:wrap}
 
 /* icons */
 .icon-search{width:100%;max-width:340px;margin-bottom:14px;padding:9px 13px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;font-size:13px}
@@ -242,19 +256,76 @@ function dl(name, content, type='image/svg+xml'){
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob([content],{type})); a.download=name;
   document.body.appendChild(a); a.click(); a.remove(); }
+function dlBlob(name, blob){
+  const url=URL.createObjectURL(blob); const a=document.createElement('a');
+  a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000); }
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+
+/* ---- SVG → PNG (transparent background, high-res) ---- */
+/* Inject explicit size (from viewBox) + color so currentColor renders when rasterized. */
+function pngSource(svg, fg){
+  let attrs='';
+  if(!/<svg[^>]*\swidth=/.test(svg)){
+    const vb=svg.match(/viewBox="([^"]+)"/);
+    if(vb){ const p=vb[1].trim().split(/[\s,]+/).map(Number);
+      if(p.length===4) attrs+=` width="${p[2]}" height="${p[3]}"`; }
+  }
+  if(fg) attrs+=` color="${fg}"`;
+  return attrs ? svg.replace('<svg', '<svg'+attrs) : svg;
+}
+function svgDims(svg){
+  const vb=svg.match(/viewBox="([^"]+)"/);
+  if(vb){ const p=vb[1].trim().split(/[\s,]+/).map(Number); if(p.length===4) return [p[2],p[3]]; }
+  const w=svg.match(/\bwidth="([\d.]+)"/), h=svg.match(/\bheight="([\d.]+)"/);
+  return [w?+w[1]:512, h?+h[1]:512];
+}
+/* Rasterize so the longest side is ~maxDim px. Transparent unless bg given. */
+function svgToPngBlob(svg, {fg=null, maxDim=1024, bg=null}={}){
+  return new Promise((resolve,reject)=>{
+    const [vw,vh]=svgDims(svg);
+    const s=maxDim/Math.max(vw,vh);
+    const w=Math.max(1,Math.round(vw*s)), h=Math.max(1,Math.round(vh*s));
+    const src=pngSource(svg, fg);
+    const url=URL.createObjectURL(new Blob([src],{type:'image/svg+xml;charset=utf-8'}));
+    const img=new Image();
+    img.onload=()=>{
+      const c=document.createElement('canvas'); c.width=w; c.height=h;
+      const ctx=c.getContext('2d');
+      if(bg){ ctx.fillStyle=bg; ctx.fillRect(0,0,w,h); }
+      ctx.drawImage(img,0,0,w,h);
+      URL.revokeObjectURL(url);
+      c.toBlob(b=> b?resolve(b):reject(new Error('toBlob failed')), 'image/png');
+    };
+    img.onerror=e=>{ URL.revokeObjectURL(url); reject(e); };
+    img.src=url;
+  });
+}
+async function copyPng(svg, opts, msg){
+  try{
+    const blob=await svgToPngBlob(svg,opts);
+    if(navigator.clipboard && window.ClipboardItem){
+      await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+      toast(msg||'PNG copied');
+    } else { dlBlob((opts&&opts.name)||'logo.png', blob); toast('PNG downloaded'); }
+  }catch(e){ toast('PNG copy unavailable — downloading'); 
+    try{ dlBlob((opts&&opts.name)||'logo.png', await svgToPngBlob(svg,opts)); }catch(_){}}
+}
 
 let fmt = 'hex';
 let current = null;
+let brandView = 'current';
 
 /* ---------- sidebar ---------- */
 function renderSidebar(){
-  $('#brandList').innerHTML = BRANDS.map(b=>`
-    <button class="brand-btn ${b.id===current?'active':''}" data-id="${b.id}" style="--c1:${b.accent};--c2:${b.accent2}">
+  $('#brandList').innerHTML = BRANDS.map(b=>{
+    const soon = !!b.comingSoon;
+    return `<button class="brand-btn ${b.id===current?'active':''}${soon?' soon':''}" data-id="${b.id}"${soon?' disabled aria-disabled="true"':''} style="--c1:${b.accent};--c2:${b.accent2}">
       <span class="dot" aria-hidden="true"></span>
-      <span><span class="nm">${esc(b.name)}</span><br><span class="dm">${b.domain}</span></span>
-    </button>`).join('');
-  document.querySelectorAll('.brand-btn').forEach(btn=>
+      <span><span class="nm">${esc(b.name)}</span><br><span class="dm">${soon?'Coming soon':b.domain}</span></span>
+      ${soon?'<span class="soon-badge">Soon</span>':''}
+    </button>`;}).join('');
+  document.querySelectorAll('.brand-btn:not(.soon)').forEach(btn=>
     btn.addEventListener('click',()=>{ location.hash = btn.dataset.id; }));
 }
 
@@ -270,9 +341,15 @@ function logoCard(b, l, i){
         <button class="btn primary" data-act="copysvg" data-i="${i}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
           Copy SVG</button>
+        <button class="btn" data-act="copypng" data-i="${i}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          Copy PNG</button>
         <button class="btn" data-act="dlsvg" data-i="${i}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
-          Download</button>
+          SVG</button>
+        <button class="btn" data-act="dlpng" data-i="${i}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+          PNG</button>
       </div>
     </div>
   </div>`;
@@ -311,6 +388,7 @@ function iconCard(ic, i){
     <div class="icon-acts">
       <button class="ibtn" data-act="copyicon" data-i="${i}" title="Copy SVG markup">Copy</button>
       <button class="ibtn" data-act="dlicon" data-i="${i}" title="Download .svg">SVG</button>
+      <button class="ibtn" data-act="dliconpng" data-i="${i}" title="Download .png">PNG</button>
     </div>
   </figure>`;
 }
@@ -356,15 +434,32 @@ function brandMarkdown(b){
   return L.join('\n');
 }
 
-function renderBrand(b){
+function renderBrand(base){
+  const hasVersions = !!base.versions;
+  if(!hasVersions) brandView = 'current';
+  const view = brandView;
+  /* merge the active variant over the base brand so Current/New each render a full sheet */
+  const b = (base.variants && base.variants[view]) ? {...base, ...base.variants[view]} : base;
+
   document.body.style.setProperty('--accent', b.accent);
   document.body.style.setProperty('--accent-2', b.accent2);
   document.body.style.setProperty('--on-accent', isLight(b.accent)?'#111':'#fff');
   document.body.classList.toggle('theme-dark', !!b.dark);
 
-  $('#main').innerHTML = `
+  const disclaimer = (hasVersions && view==='current' && b.currentNotice)
+    ? `<div class="notice"><svg class="ni" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg><span>${esc(b.currentNotice)}</span></div>`
+    : '';
+  const versionBar = hasVersions
+    ? `<div class="verbar" role="group" aria-label="Brand version">
+        <button data-ver="current" class="${view==='current'?'on':''}" aria-pressed="${view==='current'}">Current</button>
+        <button data-ver="new" class="${view==='new'?'on':''}" aria-pressed="${view==='new'}">New</button>
+      </div>`
+    : '';
+
+  const heroHtml = `
   <div class="hero">
-    <span class="crumb"><span class="bar"></span>Brand ${String(BRANDS.indexOf(b)+1).padStart(2,'0')} / ${String(BRANDS.length).padStart(2,'0')}</span>
+    ${disclaimer}
+    <span class="crumb"><span class="bar"></span>Brand ${String(BRANDS.indexOf(base)+1).padStart(2,'0')} / ${String(BRANDS.length).padStart(2,'0')}</span>
     <h2>${esc(b.name)}</h2>
     <p>${esc(b.tagline)}</p>
     <div class="meta">
@@ -372,8 +467,10 @@ function renderBrand(b){
       <span class="chip"><span class="sw"></span>${b.accent.toUpperCase()}</span>
       <span class="chip">${esc(b.fonts.map(f=>f.family).join(' + '))}</span>
     </div>
-  </div>
+    ${versionBar}
+  </div>`;
 
+  const sectionsHtml = `
   <section id="logo">
     <div class="sec-h"><h3>Logo</h3><span class="hint">Copy the raw SVG markup or download the file</span></div>
     <div class="logo-grid">${b.logos.map((l,i)=>logoCard(b,l,i)).join('')}</div>
@@ -446,6 +543,12 @@ function renderBrand(b){
     </div>
   </section>`;
 
+  $('#main').innerHTML = heroHtml + sectionsHtml;
+
+  /* version toggle */
+  $('#main').querySelectorAll('[data-ver]').forEach(el=>
+    el.addEventListener('click',()=>{ brandView=el.dataset.ver; renderBrand(base); window.scrollTo({top:0}); }));
+
   /* wire events */
   $('#main').querySelectorAll('[data-copy]').forEach(el=>
     el.addEventListener('click',()=>copy(el.dataset.copy, `${el.dataset.copy} copied`)));
@@ -456,6 +559,13 @@ function renderBrand(b){
   $('#main').querySelectorAll('[data-act="dlsvg"]').forEach(el=>
     el.addEventListener('click',()=>{ const l=b.logos[+el.dataset.i];
       dl(`${b.id}-${slug(l.label)}.svg`, l.svg); }));
+  $('#main').querySelectorAll('[data-act="copypng"]').forEach(el=>
+    el.addEventListener('click',()=>{ const l=b.logos[+el.dataset.i];
+      copyPng(l.svg, {fg:l.fg||null, maxDim:1536}, 'PNG copied'); }));
+  $('#main').querySelectorAll('[data-act="dlpng"]').forEach(el=>
+    el.addEventListener('click',async()=>{ const l=b.logos[+el.dataset.i];
+      try{ dlBlob(`${b.id}-${slug(l.label)}.png`, await svgToPngBlob(l.svg,{fg:l.fg||null, maxDim:1536})); toast('PNG downloaded'); }
+      catch(e){ toast('PNG export failed'); } }));
   $('#main').querySelector('[data-act="csscopy"]').addEventListener('click',()=>copy(cssVars(b),'CSS variables copied'));
   $('#main').querySelector('[data-act="jsoncopy"]').addEventListener('click',()=>copy(tokensJson(b),'JSON tokens copied'));
   $('#main').querySelector('[data-act="mdcopy"]').addEventListener('click',()=>copy(brandMarkdown(b),'Markdown copied'));
@@ -466,6 +576,10 @@ function renderBrand(b){
     el.addEventListener('click',()=>{ const ic=b.icons[+el.dataset.i]; copy(ic.svg, `${ic.name} SVG copied`); }));
   $('#main').querySelectorAll('[data-act="dlicon"]').forEach(el=>
     el.addEventListener('click',()=>{ const ic=b.icons[+el.dataset.i]; dl(`${b.id}-icon-${slug(ic.name)}.svg`, ic.svg); }));
+  $('#main').querySelectorAll('[data-act="dliconpng"]').forEach(el=>
+    el.addEventListener('click',async()=>{ const ic=b.icons[+el.dataset.i];
+      try{ dlBlob(`${b.id}-icon-${slug(ic.name)}.png`, await svgToPngBlob(ic.svg,{maxDim:512})); toast('PNG downloaded'); }
+      catch(e){ toast('PNG export failed'); } }));
   const iconSearch=$('#iconSearch');
   if(iconSearch){
     iconSearch.addEventListener('input',()=>{
@@ -481,10 +595,13 @@ function renderBrand(b){
 }
 
 /* ---------- routing ---------- */
+function firstActive(){ return BRANDS.find(x=>!x.comingSoon) || BRANDS[0]; }
 function route(){
-  const id = location.hash.replace('#','') || BRANDS[0].id;
-  const b = BRANDS.find(x=>x.id===id) || BRANDS[0];
+  const id = location.hash.replace('#','');
+  let b = BRANDS.find(x=>x.id===id);
+  if(!b || b.comingSoon) b = firstActive();
   current = b.id;
+  brandView = 'current';
   renderSidebar();
   renderBrand(b);
   window.scrollTo({top:0});
