@@ -606,8 +606,8 @@ function route(){
   renderBrand(b);
   window.scrollTo({top:0});
 }
-/* ---------- login gate (client-side; admin / admin) ---------- */
-const AUTH_USER='admin', AUTH_PASS='admin', AUTH_KEY='tbb-auth';
+/* ---------- login gate (client-side) ---------- */
+const AUTH_USER='user', AUTH_PASS='T1ugo#Br4nd!26', AUTH_KEY='tbb-auth-v2';
 function isAuthed(){ try{ return sessionStorage.getItem(AUTH_KEY)==='1'; }catch(e){ return false; } }
 function startApp(){
   window.addEventListener('hashchange', route);
