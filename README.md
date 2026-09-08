@@ -20,6 +20,8 @@ build/
   build.py            ← injects brands.json into template.html → ../index.html
 assets/logos/         ← standalone SVG masters (reference copies; the app embeds
                         its own copies inside brands.json)
+  <pack>/             ← optional per-brand asset pack, wired up via "assetDir"
+                        (see "Logo asset packs" below)
 AGENTS.md             ← working rules for AI agents (Cursor picks this up)
 PROMPT.md             ← kickoff prompt for the Cursor agent
 ```
@@ -33,6 +35,32 @@ open index.html          # no server, no dependencies, no build chain
 
 Deploy = upload `index.html` anywhere static (Netlify Drop, Vercel, S3, GitHub Pages).
 The only external requests are Google Fonts.
+
+## Logo asset packs
+
+To publish a set of ready-made logo exports, drop the files into
+`assets/logos/<pack>/` and point a brand — or one of its variants — at the folder:
+
+```json
+{ "assetDir": "uploadcare-new" }
+```
+
+The build embeds every `.svg` and `.png` in that folder into an `assetFiles` field
+and the app renders an **Asset files** section, so downloads hand back the original
+bytes instead of a re-render. Files sharing a stem (`lockup-dark.svg` +
+`lockup-dark.png`) collapse into one card offering both formats.
+
+Filenames drive the presentation, so name them in kebab-case using these keywords:
+
+| Keyword                        | Effect |
+|--------------------------------|--------|
+| `lockup` / `glyph` / `wordmark` | Sets the card title |
+| `dark` / `light`               | Which surface the artwork is *for* — picks the preview stage |
+| `padded`                       | Noted as shipping with clear space baked in |
+| `transparent`                  | Noted as having a transparent background |
+
+PNGs are embedded as base64, so a pack of any size grows `index.html` — keep exports
+reasonably sized to protect the single-file deliverable.
 
 ## Data provenance (important)
 

@@ -113,6 +113,8 @@ section{margin-bottom:56px}
 .logo-meta .lbl{font-weight:600;font-size:13.5px}
 .logo-meta .nt{font-size:12px;color:var(--ink-2);line-height:1.5;flex:1}
 .logo-meta .row{display:flex;gap:8px;flex-wrap:wrap}
+.ftags{display:flex;gap:6px;flex-wrap:wrap}
+.ftag{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);border:1px solid var(--line);border-radius:5px;padding:3px 7px;white-space:nowrap}
 
 /* icons */
 .icon-search{width:100%;max-width:340px;margin-bottom:14px;padding:9px 13px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;font-size:13px}
@@ -312,6 +314,67 @@ async function copyPng(svg, opts, msg){
     try{ dlBlob((opts&&opts.name)||'logo.png', await svgToPngBlob(svg,opts)); }catch(_){}}
 }
 
+/* ---- original asset files (embedded byte-for-byte) ---- */
+const TXT = new TextEncoder();
+function dataUriToBytes(uri){
+  const bin=atob(uri.slice(uri.indexOf(',')+1));
+  const out=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++) out[i]=bin.charCodeAt(i);
+  return out;
+}
+const kb = n => n<1024 ? `${n} B` : `${(n/1024).toFixed(n<10240?1:0)} KB`;
+/* Every file an asset entry can hand over, as {name, bytes}. */
+function assetBlobs(f){
+  const out=[];
+  if(f.svg) out.push({name:`${f.name}.svg`, bytes:TXT.encode(f.svg), type:'image/svg+xml'});
+  if(f.png) out.push({name:`${f.name}.png`, bytes:dataUriToBytes(f.png), type:'image/png'});
+  return out;
+}
+async function copyPngBytes(bytes, msg){
+  const blob=new Blob([bytes],{type:'image/png'});
+  try{
+    if(!(navigator.clipboard && window.ClipboardItem)) throw new Error('unsupported');
+    await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+    toast(msg||'PNG copied');
+  }catch(e){ toast('PNG copy unavailable — downloading'); dlBlob('asset.png', blob); }
+}
+
+/* ---- minimal store-only .zip writer (no compression, no dependencies) ---- */
+const CRC_TABLE=(()=>{ const t=new Uint32Array(256);
+  for(let n=0;n<256;n++){ let c=n; for(let k=0;k<8;k++) c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1); t[n]=c>>>0; }
+  return t; })();
+function crc32(bytes){ let c=0xFFFFFFFF;
+  for(let i=0;i<bytes.length;i++) c=CRC_TABLE[(c^bytes[i])&0xFF]^(c>>>8);
+  return (c^0xFFFFFFFF)>>>0; }
+function zipBlob(files){
+  const local=[], central=[]; let offset=0;
+  files.forEach(f=>{
+    const name=TXT.encode(f.name), data=f.bytes, crc=crc32(data), len=data.length;
+    const lh=new DataView(new ArrayBuffer(30));
+    lh.setUint32(0,0x04034b50,true); lh.setUint16(4,20,true); lh.setUint16(6,0,true);
+    lh.setUint16(8,0,true);   /* method 0 = stored */
+    lh.setUint16(10,0,true); lh.setUint16(12,0,true);
+    lh.setUint32(14,crc,true); lh.setUint32(18,len,true); lh.setUint32(22,len,true);
+    lh.setUint16(26,name.length,true); lh.setUint16(28,0,true);
+    local.push(new Uint8Array(lh.buffer), name, data);
+    const cd=new DataView(new ArrayBuffer(46));
+    cd.setUint32(0,0x02014b50,true); cd.setUint16(4,20,true); cd.setUint16(6,20,true);
+    cd.setUint16(8,0,true); cd.setUint16(10,0,true); cd.setUint16(12,0,true); cd.setUint16(14,0,true);
+    cd.setUint32(16,crc,true); cd.setUint32(20,len,true); cd.setUint32(24,len,true);
+    cd.setUint16(28,name.length,true); cd.setUint16(30,0,true); cd.setUint16(32,0,true);
+    cd.setUint16(34,0,true); cd.setUint16(36,0,true); cd.setUint32(38,0,true);
+    cd.setUint32(42,offset,true);
+    central.push(new Uint8Array(cd.buffer), name);
+    offset += 30 + name.length + len;
+  });
+  const cdSize=central.reduce((n,c)=>n+c.length,0);
+  const eo=new DataView(new ArrayBuffer(22));
+  eo.setUint32(0,0x06054b50,true); eo.setUint16(4,0,true); eo.setUint16(6,0,true);
+  eo.setUint16(8,files.length,true); eo.setUint16(10,files.length,true);
+  eo.setUint32(12,cdSize,true); eo.setUint32(16,offset,true); eo.setUint16(20,0,true);
+  return new Blob([...local,...central,new Uint8Array(eo.buffer)],{type:'application/zip'});
+}
+
 let fmt = 'hex';
 let current = null;
 let brandView = 'current';
@@ -350,6 +413,32 @@ function logoCard(b, l, i){
         <button class="btn" data-act="dlpng" data-i="${i}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
           PNG</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+const DL_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>';
+const CP_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+
+/* A card per original export — buttons hand back the exact bytes on disk. */
+function assetCard(f, i){
+  const preview = f.svg || `<img src="${f.png}" alt="${esc(f.label)}" loading="lazy">`;
+  const tags = [
+    f.svg ? `<span class="ftag">SVG · ${esc(f.svgSize)} · ${kb(f.svgBytes)}</span>` : '',
+    f.png ? `<span class="ftag">PNG · ${esc(f.pngSize)} · ${kb(f.pngBytes)}</span>` : ''
+  ].join('');
+  return `<div class="logo-card">
+    <div class="logo-stage ${f.bg}">${preview}</div>
+    <div class="logo-meta">
+      <span class="lbl">${esc(f.label)}</span>
+      <span class="nt">${esc(f.note)}</span>
+      <div class="ftags">${tags}</div>
+      <div class="row">
+        ${f.svg?`<button class="btn primary" data-act="fdlsvg" data-i="${i}">${DL_ICON}SVG</button>`:''}
+        ${f.png?`<button class="btn ${f.svg?'':'primary'}" data-act="fdlpng" data-i="${i}">${DL_ICON}PNG</button>`:''}
+        ${f.svg?`<button class="btn" data-act="fcopysvg" data-i="${i}">${CP_ICON}Copy SVG</button>`:''}
+        ${f.png?`<button class="btn" data-act="fcopypng" data-i="${i}">${CP_ICON}Copy PNG</button>`:''}
       </div>
     </div>
   </div>`;
@@ -476,6 +565,18 @@ function renderBrand(base){
     <div class="logo-grid">${b.logos.map((l,i)=>logoCard(b,l,i)).join('')}</div>
   </section>
 
+  ${(b.assetFiles&&b.assetFiles.length)?`
+  <section id="files">
+    <div class="sec-h">
+      <h3>Asset files</h3>
+      <span class="hint">Original exports — you get the exact file, not a re-render</span>
+      <div class="sec-actions">
+        <button class="btn primary" data-act="zipall">${DL_ICON}Download all (${b.assetFiles.reduce((n,f)=>n+(f.svg?1:0)+(f.png?1:0),0)} files)</button>
+      </div>
+    </div>
+    <div class="logo-grid">${b.assetFiles.map((f,i)=>assetCard(f,i)).join('')}</div>
+  </section>`:''}
+
   <section id="icons">
     <div class="sec-h"><h3>Icons</h3><span class="hint">Copy or download any glyph as SVG</span></div>
     ${(b.icons&&b.icons.length)?`
@@ -566,6 +667,28 @@ function renderBrand(base){
     el.addEventListener('click',async()=>{ const l=b.logos[+el.dataset.i];
       try{ dlBlob(`${b.id}-${slug(l.label)}.png`, await svgToPngBlob(l.svg,{fg:l.fg||null, maxDim:1536})); toast('PNG downloaded'); }
       catch(e){ toast('PNG export failed'); } }));
+  /* asset files — serve the original bytes straight back */
+  const files = b.assetFiles || [];
+  $('#main').querySelectorAll('[data-act="fdlsvg"]').forEach(el=>
+    el.addEventListener('click',()=>{ const f=files[+el.dataset.i];
+      dl(`${f.name}.svg`, f.svg); toast(`${f.name}.svg downloaded`); }));
+  $('#main').querySelectorAll('[data-act="fdlpng"]').forEach(el=>
+    el.addEventListener('click',()=>{ const f=files[+el.dataset.i];
+      dlBlob(`${f.name}.png`, new Blob([dataUriToBytes(f.png)],{type:'image/png'}));
+      toast(`${f.name}.png downloaded`); }));
+  $('#main').querySelectorAll('[data-act="fcopysvg"]').forEach(el=>
+    el.addEventListener('click',()=>copy(files[+el.dataset.i].svg,'SVG markup copied')));
+  $('#main').querySelectorAll('[data-act="fcopypng"]').forEach(el=>
+    el.addEventListener('click',()=>copyPngBytes(dataUriToBytes(files[+el.dataset.i].png),'PNG copied')));
+  const zipBtn = $('#main').querySelector('[data-act="zipall"]');
+  if(zipBtn) zipBtn.addEventListener('click',()=>{
+    try{
+      const all = files.flatMap(assetBlobs);
+      dlBlob(`${b.id}-${brandView}-logos.zip`, zipBlob(all));
+      toast(`${all.length} files downloaded`);
+    }catch(e){ toast('ZIP export failed'); }
+  });
+
   $('#main').querySelector('[data-act="csscopy"]').addEventListener('click',()=>copy(cssVars(b),'CSS variables copied'));
   $('#main').querySelector('[data-act="jsoncopy"]').addEventListener('click',()=>copy(tokensJson(b),'JSON tokens copied'));
   $('#main').querySelector('[data-act="mdcopy"]').addEventListener('click',()=>copy(brandMarkdown(b),'Markdown copied'));
