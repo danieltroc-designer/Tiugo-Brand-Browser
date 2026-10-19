@@ -11,6 +11,16 @@ data field at build time. See assets/icons/README.md for the convention.
 Logo asset packs are file-driven too: set "assetDir": "<folder>" on a brand (or
 on one of its variants) and every .svg/.png in assets/logos/<folder>/ is
 embedded into an `assetFiles` field, grouped by filename, ready to download.
+For several packs, use "assetPacks": [{"dir": "<folder>", "title": ...}] —
+each pack gets its own `files` list and its own section.
+
+Media packs ("mediaPacks": [{"dir": "<brand>/<pack>", ...}]) point at
+full-resolution files in assets/media/<dir>/. Only the small WebP previews
+from build/make_previews.py are embedded; the originals ship next to
+index.html and are linked for download.
+
+Brand fonts with a "file" (in assets/fonts/) are embedded as @font-face data
+URIs in place of the /*__FONT_FACES__*/ marker in template.html.
 """
 import base64
 import json
@@ -22,6 +32,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 BUILD = ROOT / "build"
 ICONS_DIR = ROOT / "assets" / "icons"
 LOGOS_DIR = ROOT / "assets" / "logos"
+MEDIA_DIR = ROOT / "assets" / "media"
+FONTS_DIR = ROOT / "assets" / "fonts"
+FONT_FORMATS = {".woff2": "woff2", ".woff": "woff", ".ttf": "truetype", ".otf": "opentype"}
+FONT_MIME = {".woff2": "font/woff2", ".woff": "font/woff", ".ttf": "font/ttf", ".otf": "font/otf"}
 
 _XML_PROLOG = re.compile(r"^\s*<\?xml[^>]*\?>\s*", re.IGNORECASE)
 _DOCTYPE = re.compile(r"^\s*<!DOCTYPE[^>]*>\s*", re.IGNORECASE)
@@ -91,7 +105,13 @@ def _png_size(data: bytes) -> str:
 def _asset_meta(stem: str):
     """Derive a display label, stage background and note from a filename."""
     parts = [p for p in re.split(r"[-_]+", stem.lower()) if p]
-    kind = next((k for k in ("lockup", "glyph", "wordmark", "symbol") if k in parts), "")
+    if "favicon" in parts:
+        size = next((p for p in parts if p.isdigit()), "")
+        color = next((p for p in parts if not p.isdigit() and p != "favicon"), "")
+        label = "Favicon" + (f" · {size} px" if size else "") + (f" · {color} tile" if color else "")
+        note = (f"{size} px favicon" if size else "Favicon") + (f" on the {color} tile." if color else ".")
+        return label, "light", note
+    kind = next((k for k in ("lockup", "glyph", "wordmark", "logomark", "symbol") if k in parts), "")
     kind = kind.capitalize() if kind else _title(stem)
     bg = "dark" if "dark" in parts else "light"
     traits = [t for t in ("padded", "transparent") if t in parts]
@@ -110,8 +130,10 @@ def _asset_meta(stem: str):
 
 def _asset_order(entry: dict):
     parts = re.split(r"[-_]+", entry["name"].lower())
+    size = next((int(p) for p in parts if p.isdigit()), 0)
     return (
-        0 if "lockup" in parts else 1,
+        0 if ("lockup" in parts or "wordmark" in parts) else 1,
+        size,
         0 if "dark" in parts else 1,
         1 if "padded" in parts else 0,
         1 if "transparent" in parts else 0,
@@ -159,6 +181,54 @@ def load_logo_assets(folder_name: str) -> list:
     return assets
 
 
+def load_media(folder_name: str) -> list:
+    """List full-res media in assets/media/<folder_name>/ with embedded previews."""
+    folder = MEDIA_DIR / folder_name
+    if not folder.is_dir():
+        return []
+    items = []
+    for path in sorted(folder.iterdir(), key=_natkey):
+        if path.suffix.lower() not in (".png", ".jpg", ".jpeg"):
+            continue
+        preview = folder / "_previews" / f"{path.stem}.webp"
+        if not preview.is_file():
+            raise SystemExit(f"Missing preview for {path.relative_to(ROOT)} — run build/make_previews.py")
+        data = path.read_bytes()
+        parts = re.split(r"[-_]+", path.stem.lower())
+        items.append({
+            "name": path.name,
+            "label": _title(path.stem),
+            "href": path.relative_to(ROOT).as_posix(),
+            "preview": "data:image/webp;base64," + base64.b64encode(preview.read_bytes()).decode("ascii"),
+            "size": _png_size(data) if path.suffix.lower() == ".png" else "",
+            "bytes": len(data),
+            "bg": "light" if "light" in parts else "dark",
+        })
+    return items
+
+
+def font_faces(brands: list) -> str:
+    """@font-face rules (data URIs) for every brand font that names a file."""
+    rules, seen = [], set()
+    for brand in brands:
+        for target in [brand] + list((brand.get("variants") or {}).values()):
+            for font in target.get("fonts") or []:
+                file = font.get("file")
+                if not file or file in seen:
+                    continue
+                seen.add(file)
+                path = FONTS_DIR / file
+                suffix = path.suffix.lower()
+                b64 = base64.b64encode(path.read_bytes()).decode("ascii")
+                rules.append(
+                    "@font-face{"
+                    f"font-family:'{font['family']}';"
+                    f"src:url(data:{FONT_MIME[suffix]};base64,{b64}) format('{FONT_FORMATS[suffix]}');"
+                    f"font-weight:{font.get('weightRange', '400')};font-style:normal;font-display:swap}}"
+                )
+    return "\n".join(rules)
+
+
 def main() -> None:
     template = (BUILD / "template.html").read_text(encoding="utf-8")
     brands = json.loads((BUILD / "brands.json").read_text(encoding="utf-8"))
@@ -184,15 +254,27 @@ def main() -> None:
             target["assetFiles"] = load_logo_assets(folder)
             asset_total += len(target["assetFiles"])
 
+    # Multiple named asset packs and full-res media galleries.
+    media_total = 0
+    for brand in brands:
+        for target in [brand] + list((brand.get("variants") or {}).values()):
+            for pack in target.get("assetPacks") or []:
+                pack["files"] = load_logo_assets(pack["dir"])
+                asset_total += len(pack["files"])
+            for pack in target.get("mediaPacks") or []:
+                pack["items"] = load_media(pack["dir"])
+                media_total += len(pack["items"])
+
     # Compact JSON; escape "</" so inline <script> can never be closed early.
     payload = json.dumps(brands, ensure_ascii=False, separators=(",", ":"))
     payload = payload.replace("</", "<\\/")
 
-    out = template.replace("__BRANDS_JSON__", payload)
+    out = template.replace("/*__FONT_FACES__*/", font_faces(brands))
+    out = out.replace("__BRANDS_JSON__", payload)
     (ROOT / "index.html").write_text(out, encoding="utf-8")
     print(
         f"index.html written ({len(out):,} bytes, {len(brands)} brands, "
-        f"{icon_total} icons, {asset_total} logo files)"
+        f"{icon_total} icons, {asset_total} logo files, {media_total} media files)"
     )
 
 

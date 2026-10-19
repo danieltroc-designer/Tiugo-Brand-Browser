@@ -337,177 +337,816 @@
   },
   {
     "id": "tiugo",
-    "name": "Tiugo Technologies",
-    "domain": "tiugotech.com",
-    "tagline": "Scaling market-leading developer platforms",
-    "accent": "#3A63AF",
-    "accent2": "#2AA27B",
+    "name": "Tiugo",
+    "domain": "tiugo.ai",
+    "tagline": "Tiugo is the embedded AI content layer: developer tools that let enterprises create, govern and scale content with confidence. Governance, visibility and control are built in, not added on.",
+    "accent": "#FF5A00",
+    "accent2": "#121212",
     "dark": false,
-    "comingSoon": true,
+    "source": "Tiugo brand guidelines · Version 1.0 · 2026",
+    "about": [
+      {
+        "label": "Mission",
+        "text": "We deliver market-leading content creation and collaboration tools that empower professional software teams to accelerate digital innovation."
+      },
+      {
+        "label": "Vision",
+        "text": "Creating a global community of millions of developers and product managers who love and trust our products."
+      }
+    ],
+    "claims": [
+      "Content, with confidence.",
+      "Stand behind every word.",
+      "The embedded AI content layer",
+      "Create with AI."
+    ],
     "logos": [
       {
-        "label": "Primary lockup",
-        "svg": "<svg width=\"122\" height=\"35\" viewBox=\"0 0 122 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_367_3518)\">\n<path d=\"M29.4013 16.5927C30.6013 15.3892 30.5951 13.5839 29.4013 12.3743C25.8201 8.76376 22.2326 5.16551 18.6451 1.55499C18.3388 1.24183 18.0263 0.934814 17.6951 0.609375C16.8638 1.82516 16.2263 3.0778 15.9513 4.49008C15.6951 5.82253 15.9326 7.0199 16.9076 8.02078C18.0388 9.1813 19.1763 10.3295 20.3138 11.4839C21.2826 12.4664 22.2513 13.455 23.2513 14.4743L27.4013 18.5515L29.4013 16.5866V16.5927Z\" fill=\"url(#paint0_linear_367_3518)\"/>\n<path d=\"M27.1365 10.5257L23.249 14.4924C23.1115 14.6336 22.999 14.7503 22.8865 14.8608C20.899 16.8871 18.9053 18.9073 16.9178 20.9336C16.1303 21.738 15.8053 22.7328 15.8928 23.8073C15.9928 25.0538 16.424 26.2266 17.0553 27.3196C17.249 27.6573 17.4615 27.995 17.6803 28.3573C17.8053 28.2407 17.899 28.1608 17.9803 28.081C21.7865 24.2556 25.599 20.4301 29.399 16.5985C30.599 15.395 30.5928 13.5898 29.399 12.3801C28.7115 11.6863 28.024 10.9985 27.3365 10.3047L27.1365 10.5196V10.5257Z\" fill=\"#6098FF\"/>\n<path d=\"M0.9 12.4487C-0.3 13.6522 -0.3 15.4575 0.9 16.6671C4.48125 20.2777 8.0625 23.8821 11.65 27.4926C11.9563 27.8057 12.2688 28.1128 12.6 28.4382C13.4313 27.2224 14.0688 25.9698 14.3438 24.5575C14.6063 23.225 14.3625 22.0277 13.3938 21.0268C12.2625 19.8663 11.125 18.718 9.99375 17.5636C9.025 16.5812 8.0625 15.5926 7.05625 14.5733L2.9125 10.4961L0.9125 12.461L0.9 12.4487Z\" fill=\"url(#paint1_linear_367_3518)\"/>\n<path d=\"M3.15625 18.5152L7.04375 14.5485C7.18125 14.4073 7.29375 14.2906 7.40625 14.1801C9.4 12.1538 11.3875 10.1336 13.3813 8.10728C14.1688 7.30289 14.4938 6.30816 14.4063 5.23359C14.3063 3.9871 13.875 2.8143 13.2438 1.72131C13.05 1.38359 12.8375 1.04587 12.625 0.683594C12.5 0.80026 12.4063 0.880085 12.325 0.95991C8.51875 4.79149 4.70625 8.61079 0.9 12.4362C-0.3 13.6397 -0.3 15.445 0.9 16.6546C1.5875 17.3485 2.26875 18.0362 2.95625 18.7301L3.15625 18.5152Z\" fill=\"#6098FF\"/>\n<path d=\"M50.7953 5.97611H44.1266V22.8805H39.9891V5.97611H33.3203V2.14453H50.7953V5.97611Z\" fill=\"#15294C\"/>\n<path d=\"M56.3641 22.8866H52.1953V2.14453H56.3641V22.8805V22.8866Z\" fill=\"#15294C\"/>\n<path d=\"M67.5883 23.3533C65.2445 23.3533 63.3133 22.6656 61.782 21.2901C60.2508 19.9147 59.4883 17.9989 59.4883 15.5428V2.14453H63.5945V15.248C63.5945 16.5928 63.9445 17.6244 64.6508 18.3305C65.357 19.0428 66.332 19.3989 67.582 19.3989C68.832 19.3989 69.8383 19.0428 70.5445 18.3305C71.2508 17.6182 71.6008 16.5928 71.6008 15.248V2.14453H75.707V15.5428C75.707 17.9989 74.9445 19.9147 73.4133 21.2901C71.882 22.6656 69.9383 23.3533 67.5758 23.3533H67.5883Z\" fill=\"#15294C\"/>\n<path d=\"M97.9523 22.8834H94.6148L94.3461 20.5133C93.8086 21.3115 93.0086 21.9808 91.9523 22.515C90.8961 23.0492 89.6148 23.3194 88.1273 23.3194C85.1898 23.3194 82.7023 22.3369 80.6586 20.3659C78.6148 18.3948 77.5898 15.7852 77.5898 12.5247C77.5898 9.26413 78.6461 6.6729 80.7586 4.68343C82.8711 2.69396 85.4148 1.69922 88.3961 1.69922C90.9773 1.69922 93.0836 2.31325 94.7211 3.54132C96.3586 4.76939 97.4648 6.27992 98.0398 8.0729L94.1086 9.44834C93.7898 8.37378 93.1523 7.44659 92.1898 6.65448C91.2273 5.86238 89.9586 5.46939 88.3961 5.46939C86.6086 5.46939 85.0586 6.07729 83.7398 7.2808C82.4211 8.49045 81.7586 10.2343 81.7586 12.5185C81.7586 14.8027 82.3961 16.5036 83.6773 17.7562C84.9586 19.0027 86.5398 19.629 88.4273 19.629C90.1711 19.629 91.5148 19.1931 92.4461 18.3273C93.3773 17.4615 93.9273 16.5466 94.0836 15.5948H87.4148V12.0826H97.9523V22.8773V22.8834Z\" fill=\"#15294C\"/>\n<path d=\"M99.3516 12.5247C99.3516 9.28869 100.414 6.6729 102.539 4.68343C104.664 2.69396 107.214 1.69922 110.189 1.69922C113.164 1.69922 115.745 2.69396 117.87 4.68343C119.995 6.6729 121.058 9.28255 121.058 12.5247C121.058 15.7668 119.995 18.3457 117.87 20.3352C115.745 22.3247 113.189 23.3194 110.189 23.3194C107.189 23.3194 104.664 22.3247 102.539 20.3352C100.414 18.3457 99.3516 15.7422 99.3516 12.5247ZM105.57 7.39132C104.258 8.58869 103.608 10.2896 103.608 12.494C103.608 14.6983 104.264 16.3992 105.57 17.5966C106.877 18.794 108.42 19.3957 110.183 19.3957C111.945 19.3957 113.52 18.794 114.827 17.5966C116.133 16.3992 116.789 14.6983 116.789 12.494C116.789 10.2896 116.133 8.58869 114.827 7.39132C113.514 6.19396 111.97 5.5922 110.183 5.5922C108.395 5.5922 106.877 6.19396 105.57 7.39132Z\" fill=\"#15294C\"/>\n<path d=\"M39.9875 27.7884H37.3313V34.5183H35.6875V27.7884H33.0312V26.2656H39.9875V27.7884Z\" fill=\"#6098FF\"/>\n<path d=\"M45.8055 34.5183H40.543V26.2656H45.8055V27.7762H42.1805V29.6612H45.4617V31.0919H42.1805V33.0016H45.8055V34.5121V34.5183Z\" fill=\"#6098FF\"/>\n<path d=\"M50.632 34.6941C49.4258 34.6941 48.4008 34.3012 47.5758 33.5091C46.7445 32.717 46.332 31.6792 46.332 30.402C46.332 29.1248 46.7508 28.0933 47.5945 27.295C48.4383 26.4968 49.4383 26.0977 50.6133 26.0977C51.6883 26.0977 52.5508 26.3678 53.2008 26.902C53.8508 27.4363 54.2758 28.081 54.4633 28.8363L52.9258 29.3152C52.807 28.8485 52.557 28.4556 52.182 28.1301C51.807 27.8047 51.282 27.645 50.6195 27.645C49.957 27.645 49.332 27.8845 48.8133 28.3696C48.2945 28.8485 48.0383 29.5301 48.0383 30.4082C48.0383 31.2863 48.2945 31.9126 48.8008 32.3977C49.3133 32.8889 49.9258 33.1284 50.6445 33.1284C51.3008 33.1284 51.8258 32.9626 52.2133 32.631C52.607 32.2994 52.8695 31.9003 53.0008 31.4459L54.532 31.9003C54.4445 32.2319 54.307 32.5634 54.1133 32.8766C53.9195 33.1959 53.6695 33.4968 53.3633 33.7731C53.057 34.0494 52.6633 34.2766 52.1945 34.4485C51.7258 34.6205 51.207 34.7064 50.6508 34.7064L50.632 34.6941Z\" fill=\"#6098FF\"/>\n<path d=\"M62.2313 34.5183H60.5813V31.0919H56.9188V34.5183H55.2812V26.2656H56.9188V29.5814H60.5813V26.2656H62.2313V34.5183Z\" fill=\"#6098FF\"/>\n<path d=\"M70.7313 34.5183H69.0125L65.2 28.6604V34.5183H63.5625V26.2656H65.6L69.0938 31.7244V26.2656H70.7313V34.5183Z\" fill=\"#6098FF\"/>\n<path d=\"M71.5625 30.3981C71.5625 29.1087 71.9875 28.0709 72.8312 27.2788C73.675 26.4867 74.6938 26.0938 75.875 26.0938C77.0563 26.0938 78.0875 26.4867 78.9313 27.2788C79.775 28.0709 80.2 29.1087 80.2 30.3981C80.2 31.6876 79.775 32.713 78.9313 33.5052C78.0875 34.2973 77.0688 34.6902 75.875 34.6902C74.6813 34.6902 73.675 34.2973 72.8312 33.5052C71.9875 32.713 71.5625 31.6753 71.5625 30.3981ZM74.0375 28.3534C73.5187 28.8323 73.2562 29.5078 73.2562 30.3859C73.2562 31.2639 73.5187 31.9394 74.0375 32.4183C74.5562 32.8973 75.1688 33.1367 75.875 33.1367C76.5813 33.1367 77.2 32.8973 77.725 32.4183C78.2438 31.9394 78.5063 31.2639 78.5063 30.3859C78.5063 29.5078 78.2438 28.8323 77.725 28.3534C77.2063 27.8744 76.5875 27.635 75.875 27.635C75.1625 27.635 74.5625 27.8744 74.0375 28.3534Z\" fill=\"#6098FF\"/>\n<path d=\"M86.4047 34.5183H81.0234V26.2656H82.6609V32.9832H86.4047V34.5183Z\" fill=\"#6098FF\"/>\n<path d=\"M86.3008 30.3981C86.3008 29.1087 86.7258 28.0709 87.5695 27.2788C88.4133 26.4867 89.432 26.0938 90.6133 26.0938C91.7945 26.0938 92.8258 26.4867 93.6695 27.2788C94.5133 28.0709 94.9383 29.1087 94.9383 30.3981C94.9383 31.6876 94.5133 32.713 93.6695 33.5052C92.8258 34.2973 91.807 34.6902 90.6133 34.6902C89.4195 34.6902 88.4133 34.2973 87.5695 33.5052C86.7258 32.713 86.3008 31.6753 86.3008 30.3981ZM88.7758 28.3534C88.257 28.8323 87.9945 29.5078 87.9945 30.3859C87.9945 31.2639 88.257 31.9394 88.7758 32.4183C89.2945 32.8973 89.907 33.1367 90.6133 33.1367C91.3195 33.1367 91.9383 32.8973 92.4633 32.4183C92.982 31.9394 93.2445 31.2639 93.2445 30.3859C93.2445 29.5078 92.982 28.8323 92.4633 28.3534C91.9445 27.8744 91.3258 27.635 90.6133 27.635C89.9008 27.635 89.3008 27.8744 88.7758 28.3534Z\" fill=\"#6098FF\"/>\n<path d=\"M103.382 34.5166H102.057L101.95 33.571C101.738 33.8903 101.419 34.1544 100.994 34.3693C100.569 34.5842 100.063 34.6886 99.4691 34.6886C98.3004 34.6886 97.3066 34.2956 96.4941 33.5096C95.6816 32.7237 95.2754 31.6859 95.2754 30.3903C95.2754 29.0947 95.6941 28.0631 96.5379 27.271C97.3816 26.4789 98.3941 26.0859 99.5754 26.0859C100.6 26.0859 101.444 26.3316 102.094 26.8166C102.744 27.3017 103.188 27.9096 103.413 28.6219L101.85 29.1684C101.725 28.7386 101.469 28.3701 101.088 28.057C100.707 27.7438 100.2 27.5842 99.5754 27.5842C98.8629 27.5842 98.2441 27.8237 97.7191 28.3087C97.1941 28.7877 96.9316 29.4877 96.9316 30.3903C96.9316 31.293 97.1879 31.9745 97.6941 32.4719C98.2066 32.9693 98.8316 33.2149 99.5816 33.2149C100.275 33.2149 100.813 33.043 101.182 32.6991C101.55 32.3552 101.769 31.993 101.832 31.6123H99.1754V30.2184H103.369V34.5166H103.382Z\" fill=\"#6098FF\"/>\n<path d=\"M106.094 34.5183H104.438V26.2656H106.094V34.5183Z\" fill=\"#6098FF\"/>\n<path d=\"M112.68 34.5183H107.418V26.2656H112.68V27.7762H109.055V29.6612H112.337V31.0919H109.055V33.0016H112.68V34.5121V34.5183Z\" fill=\"#6098FF\"/>\n<path d=\"M119.375 28.2295L117.907 28.6716C117.85 28.3768 117.7 28.1067 117.457 27.8672C117.213 27.6277 116.85 27.5049 116.382 27.5049C115.994 27.5049 115.675 27.6093 115.432 27.8119C115.188 28.0146 115.063 28.2663 115.063 28.5488C115.063 29.0523 115.369 29.3654 115.975 29.4821L117.15 29.7032C117.894 29.8444 118.469 30.133 118.882 30.5751C119.294 31.0172 119.5 31.5391 119.5 32.1347C119.5 32.8163 119.225 33.4119 118.675 33.9216C118.125 34.4312 117.388 34.683 116.463 34.683C115.932 34.683 115.457 34.6032 115.032 34.4497C114.607 34.2961 114.263 34.0874 114 33.8233C113.738 33.5654 113.538 33.2891 113.388 32.9944C113.238 32.6997 113.15 32.4049 113.119 32.0918L114.638 31.6988C114.675 32.1409 114.85 32.5093 115.163 32.804C115.475 33.0988 115.913 33.2461 116.469 33.2461C116.894 33.2461 117.232 33.154 117.469 32.9698C117.707 32.7856 117.832 32.54 117.832 32.233C117.832 31.9935 117.744 31.7847 117.563 31.6128C117.382 31.4409 117.132 31.3181 116.813 31.2567L115.638 31.0233C114.957 30.8821 114.419 30.6058 114.025 30.1944C113.632 29.783 113.432 29.2733 113.432 28.6593C113.432 27.9286 113.719 27.3146 114.294 26.8172C114.869 26.3198 115.557 26.0742 116.363 26.0742C116.844 26.0742 117.275 26.1418 117.657 26.2707C118.038 26.3997 118.338 26.5777 118.569 26.7988C118.8 27.0198 118.975 27.247 119.1 27.4804C119.225 27.7137 119.319 27.9593 119.375 28.2111V28.2295Z\" fill=\"#6098FF\"/>\n</g>\n<defs>\n<linearGradient id=\"paint0_linear_367_3518\" x1=\"30.9638\" y1=\"11.048\" x2=\"15.2871\" y2=\"8.23284\" gradientUnits=\"userSpaceOnUse\">\n<stop offset=\"0.25\" stop-color=\"#6098FF\"/>\n<stop offset=\"0.63\" stop-color=\"#15294C\"/>\n<stop offset=\"0.958333\" stop-color=\"#15294C\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_367_3518\" x1=\"-0.665252\" y1=\"17.9996\" x2=\"15.0094\" y2=\"20.8259\" gradientUnits=\"userSpaceOnUse\">\n<stop offset=\"0.15625\" stop-color=\"#6098FF\"/>\n<stop offset=\"0.6299\" stop-color=\"#162E52\"/>\n<stop offset=\"0.63\" stop-color=\"#15294C\"/>\n<stop offset=\"0.880208\" stop-color=\"#12294C\"/>\n</linearGradient>\n<clipPath id=\"clip0_367_3518\">\n<rect width=\"121.25\" height=\"35\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>",
+        "label": "Wordmark · Neutrals 900",
+        "asset": "wordmark-light",
         "bg": "light",
-        "note": "Icon + wordmark, full color. Preferred on white or Smoke backgrounds."
+        "note": "The Tiugo wordmark is our primary signature. Use it wherever there is room for the full name. Neutrals 900 logo on light backgrounds."
+      },
+      {
+        "label": "Wordmark · Neutrals 50",
+        "asset": "wordmark-dark",
+        "bg": "dark",
+        "note": "Neutrals 50 logo on dark backgrounds."
+      },
+      {
+        "label": "Logomark",
+        "svg": "<svg width=\"367\" height=\"367\" viewBox=\"0 0 367 367\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"367\" height=\"367\" fill=\"#FF5A00\"/>\n<path d=\"M92 106.995H166.599V274.178H180.217V295H182.109H216.987V259.968V258.068H201.439V106.995H276V72H92V106.995Z\" fill=\"white\"/>\n</svg>",
+        "bg": "light",
+        "note": "Always the T on its Orange 500 tile. The tile is part of the mark, not a background."
+      },
+      {
+        "label": "Logomark · on a dark background",
+        "svg": "<svg width=\"367\" height=\"367\" viewBox=\"0 0 367 367\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"367\" height=\"367\" fill=\"#FF5A00\"/>\n<path d=\"M92 106.995H166.599V274.178H180.217V295H182.109H216.987V259.968V258.068H201.439V106.995H276V72H92V106.995Z\" fill=\"white\"/>\n</svg>",
+        "bg": "dark",
+        "note": "Keep the tile exactly as it is. Don’t add outlines, shadows or a lighter version."
+      }
+    ],
+    "logoSpecs": [
+      {
+        "label": "Clear space",
+        "value": "0.5X",
+        "note": "Keep at least 0.5X clear on every side. X is the height of the lowercase letters."
+      },
+      {
+        "label": "Min. size · logomark",
+        "value": "16 px / 5 mm",
+        "note": "At icon sizes the logomark replaces the full logo and stays legible down to 16 px."
+      },
+      {
+        "label": "Min. size · wordmark",
+        "value": "72 px / 20 mm",
+        "note": "Use the wordmark wherever there is room for the full name."
+      },
+      {
+        "label": "Construction",
+        "value": "1 module",
+        "note": "One module = the T crossbar’s height and every stroke’s width. The notches in the T, u and g use the same module."
+      },
+      {
+        "label": "Co-branding",
+        "value": "1X",
+        "note": "Partner logos sit side by side at the same optical height, split by a thin Neutrals 300 line. Keep at least 1X of space on each side of the line and never lock the logos into one shape."
+      }
+    ],
+    "logoContrast": {
+      "note": "Which logo color goes on which background, with the contrast ratio for each pairing. Use the Neutrals 900 logo on light backgrounds and the Neutrals 50 logo on dark ones. Pairings marked with a cross fall below 3:1 and must not be used.",
+      "preferred": [
+        0,
+        0
+      ],
+      "logos": [
+        {
+          "name": "Neutrals 900 logo",
+          "asset": "wordmark-light"
+        },
+        {
+          "name": "Neutrals 50 logo",
+          "asset": "wordmark-dark"
+        }
+      ],
+      "backgrounds": [
+        {
+          "name": "Neutrals 100",
+          "hex": "#F7F7F4"
+        },
+        {
+          "name": "Neutrals 50",
+          "hex": "#FFFFFF"
+        },
+        {
+          "name": "Neutrals 400",
+          "hex": "#AEAC95"
+        },
+        {
+          "name": "Neutrals 600",
+          "hex": "#6D6E5E"
+        },
+        {
+          "name": "Neutrals 900",
+          "hex": "#121212"
+        },
+        {
+          "name": "Orange 500",
+          "hex": "#FF5A00"
+        }
+      ],
+      "cells": [
+        [
+          [
+            "17.5:1",
+            true
+          ],
+          [
+            "18.7:1",
+            true
+          ],
+          [
+            "8.15:1",
+            true
+          ],
+          [
+            "3.6:1",
+            false
+          ],
+          [
+            "1.0:1",
+            false
+          ],
+          [
+            "6.0:1",
+            true
+          ]
+        ],
+        [
+          [
+            "1.1:1",
+            false
+          ],
+          [
+            "1.0:1",
+            false
+          ],
+          [
+            "8.15:1",
+            true
+          ],
+          [
+            "3.6:1",
+            true
+          ],
+          [
+            "18.7:1",
+            true
+          ],
+          [
+            "3.1:1",
+            true
+          ]
+        ]
+      ]
+    },
+    "logoDonts": [
+      "Do not stretch the logo",
+      "Do not rotate the logo",
+      "Do not outline the logo",
+      "Do not use a gradient",
+      "Do not add a drop shadow",
+      "Do not recolor letters",
+      "Do not place on patterns",
+      "Do not use Orange 500 on Neutrals 100"
+    ],
+    "assetPacks": [
+      {
+        "dir": "tiugo",
+        "title": "Logo files",
+        "hint": "Original exports from the logo pack — you get the exact file"
+      },
+      {
+        "dir": "tiugo-favicons",
+        "title": "Favicons & app icons",
+        "compact": true,
+        "hint": "Export the size you need, from 16 px tabs to 180 px touch icons"
       }
     ],
     "colorGroups": [
       {
-        "group": "Primary",
+        "group": "Main",
+        "note": "Neutrals 900 and Neutrals 100 do the work, Orange 500 marks action and emphasis, and Neutrals 400 softens surfaces and borders.",
         "colors": [
           {
-            "name": "Dark Blue",
-            "hex": "#172E57"
+            "name": "Neutrals 900",
+            "hex": "#121212",
+            "cmyk": "73, 67, 66, 82"
           },
           {
-            "name": "Tiugo Green",
-            "hex": "#2AA27B"
+            "name": "Neutrals 100",
+            "hex": "#F7F7F4",
+            "cmyk": "2, 1, 3, 0"
           },
           {
-            "name": "Calm Sky",
-            "hex": "#3A63AF"
+            "name": "Orange 500",
+            "hex": "#FF5A00",
+            "cmyk": "0, 65, 100, 0"
           },
           {
-            "name": "White",
-            "hex": "#FFFFFF"
+            "name": "Neutrals 400",
+            "hex": "#AEAC95",
+            "cmyk": "34, 26, 43, 0"
           }
         ]
       },
       {
-        "group": "Secondary",
+        "group": "Neutrals",
+        "note": "Eleven warm grey steps with a slight green undertone. Light steps carry backgrounds and surfaces, the middle steps borders and secondary text, the dark steps text and dark sections.",
         "colors": [
           {
-            "name": "Tiugo Green 02",
-            "hex": "#85DFC2"
+            "name": "Neutrals 50",
+            "hex": "#FFFFFF",
+            "cmyk": "0, 0, 0, 0"
           },
           {
-            "name": "Calm Sky 02",
-            "hex": "#6098FF"
+            "name": "Neutrals 100",
+            "hex": "#F7F7F4",
+            "cmyk": "2, 1, 3, 0"
+          },
+          {
+            "name": "Neutrals 200",
+            "hex": "#F2F3EB",
+            "cmyk": "4, 2, 7, 0"
+          },
+          {
+            "name": "Neutrals 300",
+            "hex": "#E6E7D7",
+            "cmyk": "9, 5, 16, 0"
+          },
+          {
+            "name": "Neutrals 400",
+            "hex": "#AEAC95",
+            "cmyk": "34, 26, 43, 0"
+          },
+          {
+            "name": "Neutrals 500",
+            "hex": "#6E6D5E",
+            "cmyk": "55, 46, 60, 20"
+          },
+          {
+            "name": "Neutrals 600",
+            "hex": "#6D6E5E",
+            "cmyk": "56, 46, 61, 20"
+          },
+          {
+            "name": "Neutrals 700",
+            "hex": "#4F4E43",
+            "cmyk": "62, 54, 66, 40"
+          },
+          {
+            "name": "Neutrals 800",
+            "hex": "#212121",
+            "cmyk": "71, 66, 64, 73"
+          },
+          {
+            "name": "Neutrals 850",
+            "hex": "#181818",
+            "cmyk": "73, 67, 65, 79"
+          },
+          {
+            "name": "Neutrals 900",
+            "hex": "#121212",
+            "cmyk": "73, 67, 66, 82"
+          }
+        ]
+      },
+      {
+        "group": "Orange · main accent",
+        "note": "500 for actions and emphasis, 600 for hover and pressed states, 300 and 200 for soft highlights.",
+        "colors": [
+          {
+            "name": "Orange 600",
+            "hex": "#EB480F",
+            "cmyk": "0, 69, 94, 8"
+          },
+          {
+            "name": "Orange 500",
+            "hex": "#FF5A00",
+            "cmyk": "0, 65, 100, 0"
+          },
+          {
+            "name": "Orange 300",
+            "hex": "#FE9843",
+            "cmyk": "0, 40, 74, 0"
+          },
+          {
+            "name": "Orange 200",
+            "hex": "#FFDBC4",
+            "cmyk": "0, 14, 23, 0"
           }
         ]
       },
       {
         "group": "Supporting",
+        "note": "Violet, Blue, Fuchsia and Green support Orange in tags, data and illustrations, never as large backgrounds.",
         "colors": [
           {
-            "name": "Smoke",
-            "hex": "#F3F6FF"
+            "name": "Violet 500",
+            "hex": "#6650D3",
+            "cmyk": "71, 73, 0, 0"
           },
           {
-            "name": "Cornflower Blue",
-            "hex": "#A0C1FF"
+            "name": "Violet 300",
+            "hex": "#BBB3FF",
+            "cmyk": "27, 29, 0, 0"
           },
           {
-            "name": "Storm",
-            "hex": "#A1A7CB"
+            "name": "Violet 200",
+            "hex": "#DDD9FF",
+            "cmyk": "11, 13, 0, 0"
+          },
+          {
+            "name": "Blue 500",
+            "hex": "#2439C6",
+            "cmyk": "89, 80, 0, 0"
+          },
+          {
+            "name": "Blue 300",
+            "hex": "#6B7CF0",
+            "cmyk": "64, 53, 0, 0"
+          },
+          {
+            "name": "Blue 200",
+            "hex": "#CCDDFF",
+            "cmyk": "17, 8, 0, 0"
+          },
+          {
+            "name": "Fuchsia 500",
+            "hex": "#B2477D",
+            "cmyk": "31, 86, 25, 1"
+          },
+          {
+            "name": "Fuchsia 300",
+            "hex": "#F090C0",
+            "cmyk": "2, 54, 0, 0"
+          },
+          {
+            "name": "Fuchsia 200",
+            "hex": "#FFD9EC",
+            "cmyk": "0, 18, 0, 0"
+          },
+          {
+            "name": "Green 500",
+            "hex": "#687D46",
+            "cmyk": "61, 34, 86, 16"
+          },
+          {
+            "name": "Green 300",
+            "hex": "#A7C96F",
+            "cmyk": "38, 4, 73, 0"
+          },
+          {
+            "name": "Green 100",
+            "hex": "#E3EFD6",
+            "cmyk": "11, 0, 19, 0"
           }
         ]
       }
     ],
+    "colorRoles": {
+      "note": "Light and dark sections of the website use the same roles: background, surface, border, text, secondary text and action. Build from these roles, not from hex values, and a component works in both.",
+      "modes": [
+        {
+          "name": "Light",
+          "roles": [
+            {
+              "role": "Background",
+              "token": "neutrals/100",
+              "hex": "#F7F7F4"
+            },
+            {
+              "role": "Surface",
+              "token": "neutrals/50",
+              "hex": "#FFFFFF"
+            },
+            {
+              "role": "Border",
+              "token": "neutrals/200",
+              "hex": "#F2F3EB"
+            },
+            {
+              "role": "Text",
+              "token": "neutrals/900",
+              "hex": "#121212"
+            },
+            {
+              "role": "Secondary",
+              "token": "neutrals/700",
+              "hex": "#4F4E43"
+            },
+            {
+              "role": "Action",
+              "token": "orange/500",
+              "hex": "#FF5A00"
+            }
+          ]
+        },
+        {
+          "name": "Dark",
+          "roles": [
+            {
+              "role": "Background",
+              "token": "neutrals/850",
+              "hex": "#181818"
+            },
+            {
+              "role": "Surface",
+              "token": "neutrals/900",
+              "hex": "#121212"
+            },
+            {
+              "role": "Border",
+              "token": "neutrals/800",
+              "hex": "#212121"
+            },
+            {
+              "role": "Text",
+              "token": "neutrals/50",
+              "hex": "#FFFFFF"
+            },
+            {
+              "role": "Secondary",
+              "token": "neutrals/300",
+              "hex": "#E6E7D7"
+            },
+            {
+              "role": "Action",
+              "token": "orange/500",
+              "hex": "#FF5A00"
+            }
+          ]
+        }
+      ],
+      "sample": {
+        "eyebrow": "Mission",
+        "title": "We deliver market-leading content creation and collaboration tools that empower professional software teams to accelerate digital innovation.",
+        "card": "Four product brands: CKEditor, TinyMCE, Uploadcare, ButterCMS"
+      }
+    },
+    "colorUsage": {
+      "note": "Neutral colors form the foundation of every layout. Keep Orange 500 around 5% for key actions and highlights. Use spectrum colors sparingly in gradients, illustrations, and data visualizations.",
+      "modes": [
+        {
+          "name": "Light",
+          "segments": [
+            {
+              "role": "Background",
+              "hex": "#F7F7F4",
+              "pct": 50
+            },
+            {
+              "role": "Text",
+              "hex": "#121212",
+              "pct": 20
+            },
+            {
+              "role": "Secondary",
+              "hex": "#AEAC95",
+              "pct": 10
+            },
+            {
+              "role": "Surface",
+              "hex": "#FFFFFF",
+              "pct": 5
+            },
+            {
+              "role": "Action",
+              "hex": "#FF5A00",
+              "pct": 5
+            }
+          ]
+        },
+        {
+          "name": "Dark",
+          "segments": [
+            {
+              "role": "Background",
+              "hex": "#121212",
+              "pct": 50
+            },
+            {
+              "role": "Text",
+              "hex": "#FFFFFF",
+              "pct": 20
+            },
+            {
+              "role": "Secondary",
+              "hex": "#AEAC95",
+              "pct": 10
+            },
+            {
+              "role": "Surface",
+              "hex": "#212121",
+              "pct": 5
+            },
+            {
+              "role": "Action",
+              "hex": "#FF5A00",
+              "pct": 5
+            }
+          ]
+        }
+      ],
+      "spectrum": [
+        "#FE9843",
+        "#2439C6",
+        "#A7C96F",
+        "#F090C0",
+        "#BBB3FF"
+      ]
+    },
+    "textPairs": {
+      "note": "Use approved text and background color combinations to maintain readability and visual consistency.",
+      "pairs": [
+        [
+          "Neutrals 900",
+          "Neutrals 50"
+        ],
+        [
+          "Neutrals 900",
+          "Neutrals 100"
+        ],
+        [
+          "Neutrals 900",
+          "Neutrals 200"
+        ],
+        [
+          "Neutrals 900",
+          "Neutrals 300"
+        ],
+        [
+          "Neutrals 900",
+          "Neutrals 400"
+        ],
+        [
+          "Neutrals 50",
+          "Neutrals 600"
+        ],
+        [
+          "Neutrals 50",
+          "Neutrals 700"
+        ],
+        [
+          "Neutrals 50",
+          "Neutrals 800"
+        ],
+        [
+          "Neutrals 50",
+          "Neutrals 850"
+        ],
+        [
+          "Neutrals 50",
+          "Neutrals 900"
+        ],
+        [
+          "Neutrals 600",
+          "Neutrals 100"
+        ],
+        [
+          "Neutrals 700",
+          "Neutrals 100"
+        ],
+        [
+          "Neutrals 700",
+          "Neutrals 200"
+        ],
+        [
+          "Neutrals 900",
+          "Orange 500"
+        ],
+        [
+          "Neutrals 50",
+          "Orange 500"
+        ]
+      ]
+    },
     "fonts": [
       {
-        "family": "Poppins",
-        "role": "Primary typeface — all headings and copy",
+        "family": "Aspekta",
+        "role": "Primary typeface, from headlines to body copy. 500 Medium for headlines, titles and numbers; 400 Light for body copy; 300 Extra Light for large light headlines.",
+        "source": "Ivo Dolenc · SIL OFL 1.1 · embedded",
+        "css": "'Aspekta', 'Geist', sans-serif",
+        "file": "AspektaVF.ttf",
+        "weightRange": "100 900",
+        "url": "https://github.com/ivodolenc/aspekta",
+        "sample": "Stand behind every word."
+      },
+      {
+        "family": "Lab Mono",
+        "role": "Used only for eyebrows, labels, metadata, numbers and code.",
+        "source": "Martin Wecke · SIL OFL 1.1 · embedded",
+        "css": "'Lab Mono', 'Geist Mono', monospace",
+        "file": "LabMono-Regular.otf",
+        "weightRange": "400",
+        "url": "https://github.com/hatsumatsu/Lab-Mono",
+        "sample": "Clear and consistent."
+      },
+      {
+        "family": "Geist",
+        "substitute": "Aspekta",
+        "role": "Substitute for Aspekta in Google Docs, Slides or email. Same weights and roles: Medium replaces Aspekta 500, Regular replaces Aspekta 400.",
         "source": "Google Fonts",
-        "css": "Poppins, sans-serif"
+        "css": "'Geist', sans-serif",
+        "url": "https://fonts.google.com/specimen/Geist"
+      },
+      {
+        "family": "Geist Mono",
+        "substitute": "Lab Mono",
+        "role": "Substitute for Lab Mono Regular.",
+        "source": "Google Fonts",
+        "css": "'Geist Mono', monospace",
+        "url": "https://fonts.google.com/specimen/Geist+Mono"
       }
     ],
     "typeStyles": [
       {
-        "name": "Heading 1",
-        "family": "Poppins",
+        "name": "heading/XXL",
+        "sample": "Content, with confidence.",
+        "family": "Aspekta",
+        "weight": "500 Medium",
+        "size": 72,
+        "lh": "105%",
+        "ls": "-0.03em"
+      },
+      {
+        "name": "heading/XL",
+        "sample": "Stand behind every word.",
+        "family": "Aspekta",
         "weight": "500 Medium",
         "size": 56,
-        "lh": "1.2",
-        "ls": "0"
+        "lh": "110%"
       },
       {
-        "name": "Heading 2",
-        "family": "Poppins",
+        "name": "heading/L",
+        "sample": "The embedded AI content layer.",
+        "family": "Aspekta",
         "weight": "500 Medium",
         "size": 44,
-        "lh": "1.2",
-        "ls": "0"
+        "lh": "110%"
       },
       {
-        "name": "Heading 3",
-        "family": "Poppins",
+        "name": "heading/M",
+        "sample": "Governance, visibility and control, built in.",
+        "family": "Aspekta",
         "weight": "500 Medium",
-        "size": 36,
-        "lh": "1.2",
-        "ls": "0"
+        "size": 32,
+        "lh": "125%"
       },
       {
-        "name": "Heading 4",
-        "family": "Poppins",
-        "weight": "500 Medium",
-        "size": 24,
-        "lh": "1.2",
-        "ls": "0.15px"
+        "name": "body/large",
+        "sample": "Governance, visibility and control, built in.",
+        "family": "Aspekta",
+        "weight": "400 Light",
+        "size": 18,
+        "lh": "140%"
       },
       {
-        "name": "Accent 1",
-        "family": "Poppins",
-        "weight": "400 Regular",
-        "size": 28,
-        "lh": "1.4",
-        "ls": "0"
-      },
-      {
-        "name": "Accent 2",
-        "family": "Poppins",
-        "weight": "400 Regular",
-        "size": 24,
-        "lh": "1.4",
-        "ls": "0"
-      },
-      {
-        "name": "Body Regular",
-        "family": "Poppins",
-        "weight": "400 Regular",
-        "size": 20,
-        "lh": "1.5",
-        "ls": "0"
-      },
-      {
-        "name": "Body Bold",
-        "family": "Poppins",
-        "weight": "600 SemiBold",
-        "size": 20,
-        "lh": "1.4",
-        "ls": "0"
-      },
-      {
-        "name": "Small Text Regular",
-        "family": "Poppins",
-        "weight": "400 Regular",
+        "name": "body/medium",
+        "sample": "Best-in-class developer tools with governance, visibility and control built in.",
+        "family": "Aspekta",
+        "weight": "400 Light",
         "size": 16,
-        "lh": "1.5",
-        "ls": "0"
+        "lh": "145%"
       },
       {
-        "name": "Small Text Bold",
-        "family": "Poppins",
+        "name": "Navigation",
+        "sample": "Platform   Solutions   Developers   Customers   Company",
+        "family": "Aspekta",
+        "weight": "400 Light",
+        "size": 16,
+        "lh": "145%"
+      },
+      {
+        "name": "Buttons",
+        "sample": "Talk to Us",
+        "family": "Aspekta",
         "weight": "500 Medium",
         "size": 16,
-        "lh": "1.5",
-        "ls": "0"
+        "lh": "100%"
       },
       {
-        "name": "Uppercase",
-        "family": "Poppins",
-        "weight": "600 SemiBold",
+        "name": "label/small",
+        "sample": "Review and sign-off",
+        "family": "Lab Mono",
+        "weight": "400 Regular",
         "size": 14,
-        "lh": "1.5",
-        "ls": "2px",
+        "lh": "120%"
+      },
+      {
+        "name": "Overline",
+        "sample": "The embedded AI content layer",
+        "family": "Lab Mono",
+        "weight": "400 Regular",
+        "size": 14,
+        "lh": "120%",
+        "ls": "0.08em",
         "upper": true
       }
     ],
+    "iconSystem": {
+      "name": "Lucide",
+      "url": "https://lucide.dev",
+      "text": "We use Lucide: open-source outline icons on a 24 px grid with a 2 px stroke and round caps. Use them at 24 px in Neutrals 900 or 600, always next to a label. The full set lives on the library Icons page."
+    },
+    "mediaPacks": [
+      {
+        "dir": "tiugo/gradients",
+        "title": "Gradients & hero pattern",
+        "ratio": "16/9",
+        "hint": "4K wallpapers — soft, grainy gradients and the stepped Hero pattern",
+        "note": "Use the gradient images from the website: soft, grainy, flowing from deep blue through lilac into orange. Crop them freely, but never put long text on them or build new gradients from palette colors."
+      },
+      {
+        "dir": "tiugo/meet-backgrounds",
+        "title": "Meeting backgrounds",
+        "ratio": "16/9",
+        "hint": "4K, light and dark",
+        "note": "Keep meeting backgrounds clean and on-brand. Use the brand logo and signature patterns to create a consistent, recognizable look."
+      },
+      {
+        "dir": "tiugo/social",
+        "title": "LinkedIn covers & avatar",
+        "ratio": "auto",
+        "hint": "Company and team covers, light and dark",
+        "note": "Social media banners combine the Tiugo logo, brand patterns, and typography. Use approved layouts for both light and dark backgrounds, keeping text clear and key elements visible."
+      }
+    ],
     "guidelines": [
-      "The logo exists in three approved treatments: full color, all black, and white/color on black. The icon (double chevron) may be used alone once brand context is established.",
-      "Primary copy sits in Dark Blue on light backgrounds; Tiugo Green and Calm Sky carry accents and interactive elements.",
-      "Poppins Medium carries all headings; body copy never goes below 16px."
+      {
+        "topic": "Logo",
+        "text": "The Tiugo wordmark is our primary signature and the first thing people should recognise. Use it wherever there is room for the full name. Always use the supplied files from the library, never redraw, retype or edit it."
+      },
+      {
+        "topic": "Logo",
+        "text": "The logomark is the Tiugo T on an Orange 500 tile. Use it in small or square formats like app icons, avatars and favicons, always as one piece."
+      },
+      {
+        "topic": "Logo",
+        "text": "The logo should remain clear and readable on all approved backgrounds. On gradient backgrounds, place the logo in an area with sufficient contrast. If a background is not listed, use Neutrals 100."
+      },
+      {
+        "topic": "Logo",
+        "text": "The logo only works when it looks the same everywhere. Don’t stretch, rotate, outline, recolor or add effects to it, and don’t place it on patterns or low-contrast backgrounds. If the logo looks altered, go back to the original file."
+      },
+      {
+        "topic": "Color",
+        "text": "Use neutral colors for primary backgrounds, surfaces, and typography. Orange 500 is the main accent, while blue and supporting colors add emphasis. Keep color combinations consistent across all brand materials."
+      },
+      {
+        "topic": "Color",
+        "text": "Gradient backgrounds belong on covers, section openers and hero visuals. Crop them freely, but never put long text on them or build new gradients from palette colors."
+      },
+      {
+        "topic": "Typography",
+        "text": "Aspekta is our primary typeface, from headlines to body copy. Lab Mono is used only for eyebrows, labels, metadata, numbers and code. Keep one weight per line."
+      },
+      {
+        "topic": "Typography",
+        "text": "Large headlines are set in Aspekta 500, body copy in Aspekta 400 and labels in Lab Mono. Every size comes from the website text styles, from 72 px headlines to 14 px labels. Keep big contrast between steps and use few of them."
+      },
+      {
+        "topic": "Typography",
+        "text": "When Aspekta or Lab Mono aren't available, in Google Docs, Slides or email, use Geist and Geist Mono. They keep the same weights and roles, so layouts stay consistent."
+      },
+      {
+        "topic": "Graphic elements",
+        "text": "Stepped blocks show content moving through the layer. Use the Hero pattern from the design system as a full-width band in heroes, covers and footers. Never redraw or recolor it, and keep logos and text off it."
+      },
+      {
+        "topic": "Graphic elements",
+        "text": "The pattern works on Neutrals 900 as well as on Neutrals 100, with the same colors. Use it as a band at the edge of social posts, slides and banners, at full width and never behind text."
+      },
+      {
+        "topic": "Graphic elements",
+        "text": "Floating UI cards show governance at work: attribution, approval and roles. They are built from real interface parts, set on a site gradient, with generous space around each card."
+      },
+      {
+        "topic": "Iconography",
+        "text": "We use Lucide: open-source outline icons on a 24 px grid with a 2 px stroke and round caps. Use them at 24 px in Neutrals 900 or 600, always next to a label."
+      },
+      {
+        "topic": "Applications",
+        "text": "The Tiugo website uses clean layouts, warm neutral backgrounds, and generous whitespace. Consistent typography, clear navigation, and branded graphic elements create a cohesive experience across desktop and mobile."
+      },
+      {
+        "topic": "Applications",
+        "text": "A 6-column, 6-row grid with 120 px margins underpins every slide. The logo and page label sit on the top margin, headlines start on a row line, and images and cards span whole cells."
+      },
+      {
+        "topic": "Applications",
+        "text": "Social posts: lead with one statement or number, use gradients or the Hero pattern behind it, and keep the logo in Neutrals 900 or Neutrals 50. Square for feeds, vertical and landscape for LinkedIn."
+      }
     ]
   },
   {
