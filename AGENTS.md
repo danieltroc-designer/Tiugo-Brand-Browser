@@ -35,6 +35,12 @@ Read `README.md` first for architecture and data provenance.
   accent retint on brand switch (`--accent` / `--accent-2` on `document.body`).
 - Fonts: Aspekta (all UI text, embedded from `assets/fonts/AspektaVF.woff2`),
   JetBrains Mono (values, labels). Brand specimen text uses each brand's real typefaces.
+- UI copy stays plain: no eyebrow labels (small mono uppercase kickers above
+  headings), no pill-chip clusters, no filler hints or em-dash taglines. Sub-labels
+  are sentence-case Aspekta; JetBrains Mono is for values only (hex, sizes, files).
+- Motion: press feedback on `:active` (scale .97), hover styles only inside
+  `@media (hover:hover)`, and keep the reduced-motion / reduced-transparency /
+  high-contrast blocks at the end of the stylesheet.
 - The sidebar's "On this page" menu is built from the rendered `#overview` and
   `section[id]` elements (label = the section's `h3`), so new sections appear there
   automatically.
