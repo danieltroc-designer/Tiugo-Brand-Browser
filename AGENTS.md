@@ -33,8 +33,11 @@ Read `README.md` first for architecture and data provenance.
 - Chrome is deliberately neutral (paper `#FAFAF8`, ink `#16161A`, hairlines) so the
   brands' own colors carry the personality. The signature interaction is the
   accent retint on brand switch (`--accent` / `--accent-2` on `document.body`).
-- Fonts: Archivo (display/UI headings), Inter (UI body), JetBrains Mono (values,
-  labels). Brand specimen text uses each brand's real typefaces.
+- Fonts: Aspekta (all UI text, embedded from `assets/fonts/AspektaVF.woff2`),
+  JetBrains Mono (values, labels). Brand specimen text uses each brand's real typefaces.
+- The sidebar's "On this page" menu is built from the rendered `#overview` and
+  `section[id]` elements (label = the section's `h3`), so new sections appear there
+  automatically.
 - Preserve the accessibility floor: visible `:focus-visible` styles,
   `prefers-reduced-motion` handling, semantic buttons, `aria-live` toast,
   responsive layout down to ~390px.

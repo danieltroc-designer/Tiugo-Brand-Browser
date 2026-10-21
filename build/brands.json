@@ -937,7 +937,7 @@
         "role": "Primary typeface, from headlines to body copy. 500 Medium for headlines, titles and numbers; 400 Light for body copy; 300 Extra Light for large light headlines.",
         "source": "Ivo Dolenc · SIL OFL 1.1 · embedded",
         "css": "'Aspekta', 'Geist', sans-serif",
-        "file": "AspektaVF.ttf",
+        "file": "AspektaVF.woff2",
         "weightRange": "100 900",
         "url": "https://github.com/ivodolenc/aspekta",
         "sample": "Stand behind every word."
