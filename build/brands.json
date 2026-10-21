@@ -172,6 +172,10 @@
       "light": "logomark",
       "dark": "logomark"
     },
+    "logoPack": {
+      "href": "assets/packs/tiugo-logo-pack.zip",
+      "name": "tiugo-logo-pack.zip"
+    },
     "dark": false,
     "source": "Tiugo brand guidelines · Version 1.0 · 2026",
     "about": [

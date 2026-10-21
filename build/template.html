@@ -926,7 +926,8 @@ function renderBrand(base){
   const hasCmyk = b.colorGroups.some(g=>g.colors.some(c=>c.cmyk));
   const sectionsHtml = `
   <section id="logo">
-    <div class="sec-h"><h3>Logo</h3></div>
+    <div class="sec-h"><h3>Logo</h3>${b.logoPack?`
+      <div class="sec-actions"><a class="btn primary" href="${esc(b.logoPack.href)}" download="${esc(b.logoPack.name)}">${DL_ICON}Download logo pack</a></div>`:''}</div>
     <div class="logo-grid">${b.logos.map((l,i)=>logoCard(b,l,i)).join('')}</div>
     ${logoExtras(b)}
   </section>
