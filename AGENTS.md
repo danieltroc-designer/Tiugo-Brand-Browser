@@ -35,6 +35,26 @@ Read `README.md` first for architecture and data provenance.
   accent retint on brand switch (`--accent` / `--accent-2` on `document.body`).
 - Fonts: Aspekta (all UI text, embedded from `assets/fonts/AspektaVF.woff2`),
   JetBrains Mono (values, labels). Brand specimen text uses each brand's real typefaces.
+- **Tokens first.** The top of the stylesheet defines every design value; component
+  rules reference tokens instead of raw numbers:
+  - Color roles: `--paper` `--card` `--line` `--line-strong` `--ink` `--ink-2`
+    `--ink-3` `--accent` `--on-accent` `--danger` `--pass` `--fail` (dark mode
+    overrides them on `body.theme-dark`).
+  - Type: `--text-micro` 11 · `caption` 12 · `footnote` 13 · `subhead` 14 · `body`
+    15 · `callout` 17 · `title3` 20 · `title2` 24 · `title1` 28 · `large` 32 ·
+    `display`; tracking `--track-display/title/head` (tighter as size grows).
+  - Spacing: `--sp-N` = N × 4px (`--sp-0h` 2px, `--sp-1h` 6px), plus
+    `--section-gap`, `--grid-gap`, `--grid-gap-sm`, `--card-pad`.
+  - Shape `--r-xs/sm/md/lg/xl/pill`; motion `--ease`, `--dur-press/fast/move/theme`;
+    elevation `--shadow-1/2`, `--material`, `--blur`.
+  Add a token before adding a new one-off value.
+- **Components:** `.btn` (+ `.primary`), the shared card surface, `.seg` segmented
+  control, `.sec-h` section header, `.sub-h` / `.sub-note`, `.ftags` file metadata,
+  `.toc-float` / `.toc-inline`, `.toast`. Reuse them before inventing new ones.
+- **UI icons are Lucide** (https://lucide.dev, ISC), inlined in the `LUCIDE` map in
+  `template.html` and rendered with `icon(name)`. Copy new icons verbatim from the
+  `lucide-static` package; never hand-draw UI icons. Brand icons and logos are
+  separate and stay untouched.
 - UI copy stays plain: no eyebrow labels (small mono uppercase kickers above
   headings), no pill-chip clusters, no filler hints or em-dash taglines. Sub-labels
   are sentence-case Aspekta; JetBrains Mono is for values only (hex, sizes, files).
