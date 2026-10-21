@@ -72,6 +72,12 @@ Filenames containing `favicon` and a size (`favicon-32-orange.svg`) get favicon 
 A logo card can point at a pack file with `"asset": "<stem>"` instead of inline `svg`,
 which is how PNG-only artwork is shown until an SVG master exists.
 
+## Sidebar glyphs
+
+`"glyph": {"light": "<file stem>", "dark": "<file stem>"}` names files from the
+brand's asset pack to show in the sidebar, one per sidebar theme. Brands without a
+glyph file fall back to a two-color tile made from `accent` / `accent2`.
+
 ## Media packs (full-res downloads)
 
 `"mediaPacks": [{"dir": "tiugo/gradients", "title", "hint", "note"}]` lists every

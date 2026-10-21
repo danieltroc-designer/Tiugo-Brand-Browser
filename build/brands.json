@@ -6,6 +6,10 @@
     "tagline": "File platform for modern apps",
     "accent": "#FFCF3E",
     "accent2": "#002FFF",
+    "glyph": {
+      "light": "glyph-square-light-transparent",
+      "dark": "glyph-square-dark-transparent"
+    },
     "dark": true,
     "assetDir": "uploadcare-new",
     "logos": [
@@ -164,6 +168,10 @@
     "tagline": "Tiugo is the embedded AI content layer: developer tools that let enterprises create, govern and scale content with confidence. Governance, visibility and control are built in, not added on.",
     "accent": "#FF5A00",
     "accent2": "#121212",
+    "glyph": {
+      "light": "logomark",
+      "dark": "logomark"
+    },
     "dark": false,
     "source": "Tiugo brand guidelines · Version 1.0 · 2026",
     "about": [

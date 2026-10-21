@@ -58,7 +58,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;-we
 .btn:active,.brand-btn:active,.claim:active,.ibtn:active,.toc button:active,.gate-btn:active,.seg button:active{transform:scale(.97)}
 .swatch:active,.pair:active,.role-item:active{transform:scale(.98)}
 
-.app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+.app{display:grid;grid-template-columns:280px 216px minmax(0,1fr);min-height:100vh}
 .app>*{min-width:0}
 
 /* ---------- sidebar ---------- */
@@ -71,13 +71,26 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;-we
 .brand-btn .dot::before,.brand-btn .dot::after{content:"";position:absolute;inset:0}
 .brand-btn .dot::before{background:var(--c1)}
 .brand-btn .dot::after{background:var(--c2);clip-path:polygon(100% 0,100% 100%,0 100%)}
-.brand-btn .nm{font-weight:600;font-size:14px;line-height:1.3}
-.brand-btn .dm{font-size:12.5px;color:var(--ink-3);line-height:1.35}
+.brand-btn .glyph{width:28px;height:28px;flex:none;display:block}
+.brand-btn .glyph svg{display:block;width:100%;height:100%}
+.brand-btn .glyph .g-dark,body.theme-dark .brand-btn .glyph .g-light{display:none}
+body.theme-dark .brand-btn .glyph .g-dark{display:block}
+.brand-btn .txt{display:flex;flex-direction:column;gap:1px;min-width:0}
+.brand-btn .nm{font-weight:600;font-size:14px;line-height:1.2}
+.brand-btn .dm{font-size:12.5px;color:var(--ink-3);line-height:1.2}
 .brand-btn.soon{opacity:.45;cursor:not-allowed}
-.toc{position:relative;margin:6px 0 14px 26px;padding-left:16px;border-left:1px solid var(--line);display:flex;flex-direction:column}
-.toc .ind{position:absolute;left:-1px;top:0;width:2px;height:0;border-radius:2px;background:var(--accent);pointer-events:none;transition:transform .35s var(--ease),height .35s var(--ease)}
-.toc button{text-align:left;font-size:13.5px;line-height:1.35;padding:6px 0;color:var(--ink-2)}
+.toc{position:relative;display:flex;flex-direction:column}
+.toc .ind{position:absolute;top:0;height:0;pointer-events:none;transition:transform .35s var(--ease),height .35s var(--ease)}
+.toc button{position:relative;text-align:left;font-size:13.5px;line-height:1.35;color:var(--ink-2)}
 .toc button[aria-current="true"]{color:var(--ink);font-weight:500}
+.toc-inline{display:none;margin:6px 0 14px 26px;padding-left:16px;border-left:1px solid var(--line)}
+.toc-inline .ind{left:-1px;width:2px;border-radius:2px;background:var(--accent)}
+.toc-inline button{padding:6px 0}
+/* floating rail: a sticky, translucent card just right of the sidebar */
+.toc-rail{padding:36px 0 36px 16px}
+.toc-float{position:sticky;top:36px;padding:8px;border:1px solid var(--line);border-radius:16px;background:color-mix(in srgb,var(--card) 78%,transparent);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);box-shadow:var(--shadow)}
+.toc-float .ind{left:8px;right:8px;border-radius:9px;background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.toc-float button{padding:7px 10px;border-radius:9px}
 .side-foot{margin-top:auto;padding-left:12px;font-size:12px;color:var(--ink-3);line-height:1.6}
 .side-foot a{color:var(--ink-2)}
 
@@ -265,6 +278,7 @@ section{margin-bottom:104px;scroll-margin-top:40px}
 @media (hover:hover){
   .brand-btn:not(.soon):not(.active):hover{background:color-mix(in srgb,var(--card) 70%,transparent)}
   .toc button:hover{color:var(--ink)}
+  .toc-float button:not([aria-current="true"]):hover{background:color-mix(in srgb,var(--ink) 5%,transparent)}
   .hero .meta a:hover{color:var(--accent)}
   .btn:hover{border-color:var(--line-strong)}
   .btn.primary:hover{border-color:var(--accent);filter:brightness(1.06)}
@@ -296,6 +310,14 @@ section{margin-bottom:104px;scroll-margin-top:40px}
 .gate-shake{animation:gate-shake .4s}
 @keyframes gate-shake{10%,90%{transform:translateX(-2px)}20%,80%{transform:translateX(3px)}30%,50%,70%{transform:translateX(-6px)}40%,60%{transform:translateX(6px)}}
 
+@media (min-width:1100px){
+  main{padding-left:clamp(24px,3vw,48px)}
+}
+@media (max-width:1099px){
+  .app{grid-template-columns:280px minmax(0,1fr)}
+  .toc-rail{display:none}
+  .toc-inline{display:flex}
+}
 @media (max-width:840px){
   .app{grid-template-columns:1fr}
   .side{position:static;height:auto;padding:20px 20px 16px;gap:16px;border-right:none;border-bottom:1px solid var(--line)}
@@ -324,6 +346,7 @@ section{margin-bottom:104px;scroll-margin-top:40px}
 }
 @media (prefers-reduced-transparency: reduce){
   .toast{background:var(--ink);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .toc-float{background:var(--card);-webkit-backdrop-filter:none;backdrop-filter:none}
 }
 @media (prefers-contrast: more){
   :root{--line:#B9B8B2;--ink-3:#5B5B63}
@@ -341,6 +364,7 @@ section{margin-bottom:104px;scroll-margin-top:40px}
     <nav class="brand-list" id="brandList" aria-label="Brands"></nav>
     <div class="side-foot">Sourced from the Tiugo Brands Guidelines Figma file &amp; official brand sites.</div>
   </aside>
+  <div class="toc-rail" id="tocRail"></div>
   <main id="main"></main>
 </div>
 
@@ -506,12 +530,19 @@ let current = null;
 let brandView = 'current';
 
 /* ---------- sidebar ---------- */
+/* The brand's own glyph file (light/dark stage), else its two-color tile. */
+function glyphMark(b){
+  const g = b.glyph || {}, light = g.light && findAsset(b, g.light), dark = g.dark && findAsset(b, g.dark);
+  if(!(light && light.svg)) return '<span class="dot" aria-hidden="true"></span>';
+  const d = dark && dark.svg ? dark : light;
+  return `<span class="glyph" aria-hidden="true"><span class="g-light">${light.svg}</span><span class="g-dark">${d.svg}</span></span>`;
+}
 function renderSidebar(){
   $('#brandList').innerHTML = BRANDS.map(b=>{
     const soon = !!b.comingSoon;
     return `<button class="brand-btn ${b.id===current?'active':''}${soon?' soon':''}" data-id="${b.id}"${soon?' disabled aria-disabled="true"':''} style="--c1:${b.accent};--c2:${b.accent2}">
-      <span class="dot" aria-hidden="true"></span>
-      <span><span class="nm">${esc(b.name)}</span><br><span class="dm">${soon?'Coming soon':b.domain}</span></span>
+      ${glyphMark(b)}
+      <span class="txt"><span class="nm">${esc(b.name)}</span><span class="dm">${soon?'Coming soon':b.domain}</span></span>
     </button>`;}).join('');
   document.querySelectorAll('.brand-btn:not(.soon)').forEach(btn=>
     btn.addEventListener('click',()=>{ location.hash = btn.dataset.id; }));
@@ -520,37 +551,49 @@ function renderSidebar(){
 /* ---------- on-this-page menu ----------
    Buttons, not #links: the URL hash selects the brand. */
 let tocTargets = [];
+/* Two copies, one visible per breakpoint: a floating rail beside the sidebar on
+   wide screens, and an inline list under the active brand on medium ones. */
 function renderToc(){
-  $('#toc')?.remove();
+  document.querySelectorAll('.toc').forEach(n=>n.remove());
   const active = $('#brandList .brand-btn.active');
   tocTargets = [...$('#main').querySelectorAll('#overview, section[id]')];
   if(!active || tocTargets.length<2) return;
-  const nav = document.createElement('nav');
-  nav.className = 'toc'; nav.id = 'toc'; nav.setAttribute('aria-label','On this page');
-  nav.innerHTML = '<span class="ind" aria-hidden="true"></span>' + tocTargets.map((el,i)=>
-    `<button type="button" data-toc="${i}">${esc(el.id==='overview'?'Overview':el.querySelector('h3')?.textContent.trim()||el.id)}</button>`).join('');
-  active.after(nav);
-  nav.querySelectorAll('[data-toc]').forEach(btn=>btn.addEventListener('click',()=>{
-    const el = tocTargets[+btn.dataset.toc];
-    el.scrollIntoView({block:'start'});
-    const h = el.querySelector('h3,h2');
-    if(h){ h.tabIndex=-1; h.focus({preventScroll:true}); }
-  }));
+  const make = cls => {
+    const nav = document.createElement('nav');
+    nav.className = `toc ${cls}`; nav.setAttribute('aria-label','On this page');
+    nav.innerHTML = '<span class="ind" aria-hidden="true"></span>' + tocTargets.map((el,i)=>
+      `<button type="button" data-toc="${i}">${esc(el.id==='overview'?'Overview':el.querySelector('h3')?.textContent.trim()||el.id)}</button>`).join('');
+    nav.querySelectorAll('[data-toc]').forEach(btn=>btn.addEventListener('click',()=>{
+      const el = tocTargets[+btn.dataset.toc];
+      el.scrollIntoView({block:'start'});
+      const h = el.querySelector('h3,h2');
+      if(h){ h.tabIndex=-1; h.focus({preventScroll:true}); }
+    }));
+    return nav;
+  };
+  $('#tocRail').append(make('toc-float'));
+  active.after(make('toc-inline'));
   syncToc();
 }
 function syncToc(){
-  const nav = $('#toc'); if(!nav) return;
+  if(!tocTargets.length) return;
   const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
   let idx = 0;
   if(atEnd) idx = tocTargets.length-1;
   else tocTargets.forEach((el,i)=>{ if(el.getBoundingClientRect().top <= 120) idx = i; });
-  const btns = nav.querySelectorAll('[data-toc]');
-  btns.forEach((btn,i)=>btn.setAttribute('aria-current', i===idx?'true':'false'));
-  const cur = btns[idx], ind = nav.querySelector('.ind');
-  if(cur && ind){ ind.style.height=`${cur.offsetHeight-12}px`; ind.style.transform=`translateY(${cur.offsetTop+6}px)`; }
+  document.querySelectorAll('.toc').forEach(nav=>{
+    const btns = nav.querySelectorAll('[data-toc]');
+    btns.forEach((btn,i)=>btn.setAttribute('aria-current', i===idx?'true':'false'));
+    const cur = btns[idx], ind = nav.querySelector('.ind');
+    if(!cur || !ind || !cur.offsetHeight) return;
+    const inset = nav.classList.contains('toc-float') ? 0 : 6;
+    ind.style.height=`${cur.offsetHeight-inset*2}px`; ind.style.transform=`translateY(${cur.offsetTop+inset}px)`;
+  });
 }
 let tocRaf = 0;
-addEventListener('scroll',()=>{ if(!tocRaf) tocRaf = requestAnimationFrame(()=>{ tocRaf=0; syncToc(); }); },{passive:true});
+const queueSync = ()=>{ if(!tocRaf) tocRaf = requestAnimationFrame(()=>{ tocRaf=0; syncToc(); }); };
+addEventListener('scroll', queueSync, {passive:true});
+addEventListener('resize', queueSync);
 
 /* ---------- sections ---------- */
 /* Asset packs: named `assetPacks`, or the single legacy `assetFiles` list. */

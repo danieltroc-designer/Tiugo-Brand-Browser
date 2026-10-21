@@ -41,7 +41,8 @@ Read `README.md` first for architecture and data provenance.
 - Motion: press feedback on `:active` (scale .97), hover styles only inside
   `@media (hover:hover)`, and keep the reduced-motion / reduced-transparency /
   high-contrast blocks at the end of the stylesheet.
-- The sidebar's "On this page" menu is built from the rendered `#overview` and
+- The "On this page" menu floats in a sticky rail right of the sidebar (≥1100px),
+  sits under the active brand on medium screens, and is hidden ≤840px. It is built from the rendered `#overview` and
   `section[id]` elements (label = the section's `h3`), so new sections appear there
   automatically.
 - Preserve the accessibility floor: visible `:focus-visible` styles,
